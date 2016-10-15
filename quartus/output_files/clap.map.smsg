@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at fifo.v(49): always construct contains both blocking and non-blocking assignments File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 49

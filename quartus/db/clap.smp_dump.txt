@@ -1,0 +1,6 @@
+
+State Machine - |DetermineClap|lohi_state
+Name lohi_state.LOHI_S_LOW lohi_state.LOHI_S_HIGH lohi_state.LOHI_S_MID 
+lohi_state.LOHI_S_MID 0 0 0 
+lohi_state.LOHI_S_LOW 1 0 1 
+lohi_state.LOHI_S_HIGH 0 1 1 

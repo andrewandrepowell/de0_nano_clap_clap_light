@@ -1,0 +1,157 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "energy_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_valid",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "nreset",
+					"strict" : false
+				},
+				{
+					"name" : "energy_ready",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_valid",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[15]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
