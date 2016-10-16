@@ -45,7 +45,7 @@ module DetermineSuccessiveClapsAmount #
 				suc_claps_valid <= 1;
 			end 
 			
-	always @( posedge clock or negedge energy_nreset )
+	always @( posedge clock )
 		if ( energy_nreset==0 )
 			begin
 				energy_amt <= 0;
@@ -55,7 +55,7 @@ module DetermineSuccessiveClapsAmount #
 				energy_amt <= energy_amt+1;
 			end
 			
-	always @( posedge clock or negedge clap_nreset )
+	always @( posedge clock )
 		if ( clap_nreset==0 )
 			begin
 				clap_ready <= 0;
@@ -71,9 +71,15 @@ module DetermineSuccessiveClapsAmount #
 			end
 			
 	always @( posedge clock )
-		begin
-			clap_nreset = !energy_amt_reached;
-			energy_nreset = !( energy_amt_reached || ( clap_valid==1 && clap_ready==1 ) );
-		end
+		if ( nreset==0 )
+			begin
+				clap_nreset <= 0;
+				energy_nreset <= 0;
+			end
+		else
+			begin
+				clap_nreset = !energy_amt_reached;
+				energy_nreset = !( energy_amt_reached || ( clap_valid==1 && clap_ready==1 ) );
+			end
 	
 endmodule

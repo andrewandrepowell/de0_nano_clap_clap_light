@@ -3,7 +3,7 @@
 module ComputeEnergy #
 	(
 		parameter integer SAMPLE_WIDTH=16,
-		parameter integer ENERGY_WIDTH=16,
+		parameter integer ENERGY_WIDTH=32,
 		parameter integer DURATION=16
 	)
 	(
@@ -49,31 +49,26 @@ module ComputeEnergy #
 			end
 		else if ( sum_valid==1 )
 			begin
-				sum_data <= sum_data+sample_hold;
+				sum_data <= sum_data+(sample_hold*sample_hold);
 				sum_counter <= sum_counter+1;
 			end
 			
 	always @(posedge clock )
-		if ( nreset==0 )
+		if ( (energy_valid==1 && energy_ready==1) || nreset==0 )
 			begin
-				sum_nreset <= 0;
 				energy_valid <= 0;
 			end
 		else if ( sum_counter==(DURATION-1) )
 			begin
 				energy_data <= sum_data;
-				sum_nreset <= 0;
 				energy_valid <= 1;
 			end
+			
+	always @( posedge clock )
+		if ( nreset==0 )
+			sum_nreset <= !(sum_counter==(DURATION-1)); 
 		else
-			begin
-				if ( energy_ready==1 )
-					begin
-						energy_valid <= 0;
-					end
-				sum_nreset <= 1;
-			end
-	
+			sum_nreset <= 0;
 
 	
 endmodule 

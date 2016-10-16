@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Sat Oct 15 18:22:46 2016
+Analysis & Synthesis Status : Successful - Sat Oct 15 19:15:40 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : clap
 Top-level Entity Name : ComputeEnergy
 Family : Cyclone IV E
-Total logic elements : 97
-    Total combinational functions : 81
-    Dedicated logic registers : 83
-Total registers : 83
-Total pins : 38
+Total logic elements : 129
+    Total combinational functions : 97
+    Dedicated logic registers : 115
+Total registers : 115
+Total pins : 54
 Total virtual pins : 0
 Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
+Embedded Multiplier 9-bit elements : 2
 Total PLLs : 0

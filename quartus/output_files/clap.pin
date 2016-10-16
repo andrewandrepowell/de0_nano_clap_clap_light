@@ -73,34 +73,34 @@ VCCIO8                       : A1        : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : A2        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A3        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A4        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : A5        :        :                   :         : 8         :                
+energy_data[27]              : A5        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : A6        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : A7        :        :                   :         : 8         :                
 GND+                         : A8        :        :                   :         : 8         :                
 GND+                         : A9        :        :                   :         : 7         :                
-energy_data[3]               : A10       : output : 2.5 V             :         : 7         : N              
-energy_data[6]               : A11       : output : 2.5 V             :         : 7         : N              
-energy_data[10]              : A12       : output : 2.5 V             :         : 7         : N              
-sample_data[13]              : A13       : input  : 2.5 V             :         : 7         : N              
-sample_data[11]              : A14       : input  : 2.5 V             :         : 7         : N              
-energy_data[7]               : A15       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : A10       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A11       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A12       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : A15       :        :                   :         : 7         :                
 VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B1        :        :                   :         : 1         :                
 GND                          : B2        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B3        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : B4        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B5        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B6        :        :                   :         : 8         :                
+sample_data[3]               : B5        : input  : 2.5 V             :         : 8         : N              
+energy_data[10]              : B6        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : B7        :        :                   :         : 8         :                
 GND+                         : B8        :        :                   :         : 8         :                
 GND+                         : B9        :        :                   :         : 7         :                
-energy_ready                 : B10       : input  : 2.5 V             :         : 7         : N              
-energy_data[5]               : B11       : output : 2.5 V             :         : 7         : N              
-energy_data[2]               : B12       : output : 2.5 V             :         : 7         : N              
-sample_data[1]               : B13       : input  : 2.5 V             :         : 7         : N              
-energy_data[13]              : B14       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B10       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B11       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B12       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B13       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : B14       :        :                   :         : 7         :                
 GND                          : B15       : gnd    :                   :         :           :                
-sample_data[7]               : B16       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
 ~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : C2        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C3        :        :                   :         : 8         :                
@@ -108,42 +108,42 @@ VCCIO8                       : C4        : power  :                   : 2.5V    
 GND                          : C5        : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : C6        :        :                   :         : 8         :                
 VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
-sample_data[0]               : C8        : input  : 2.5 V             :         : 8         : N              
-energy_data[9]               : C9        : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C9        :        :                   :         : 7         :                
 VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-energy_data[8]               : C11       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C11       :        :                   :         : 7         :                
 GND                          : C12       : gnd    :                   :         :           :                
 VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
-sample_data[14]              : C14       : input  : 2.5 V             :         : 7         : N              
-nreset                       : C15       : input  : 2.5 V             :         : 6         : N              
-sample_valid                 : C16       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 6         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D1        :        :                   :         : 1         :                
 ~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 2.5 V             :         : 1         : N              
-sample_ready                 : D3        : output : 2.5 V             :         : 8         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D3        :        :                   :         : 8         :                
 VCCD_PLL3                    : D4        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D5        :        :                   :         : 8         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D6        :        :                   :         : 8         :                
+energy_data[31]              : D6        : output : 2.5 V             :         : 8         : N              
 GND                          : D7        : gnd    :                   :         :           :                
-sample_data[2]               : D8        : input  : 2.5 V             :         : 8         : N              
-energy_valid                 : D9        : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D9        :        :                   :         : 7         :                
 GND                          : D10       : gnd    :                   :         :           :                
-sample_data[9]               : D11       : input  : 2.5 V             :         : 7         : N              
-sample_data[12]              : D12       : input  : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
 VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
-sample_data[10]              : D14       : input  : 2.5 V             :         : 7         : N              
-sample_data[5]               : D15       : input  : 2.5 V             :         : 6         : N              
-sample_data[4]               : D16       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D16       :        :                   :         : 6         :                
 clock                        : E1        : input  : 2.5 V             :         : 1         : N              
 GND                          : E2        : gnd    :                   :         :           :                
 VCCIO1                       : E3        : power  :                   : 2.5V    : 1         :                
 GND                          : E4        : gnd    :                   :         :           :                
 GNDA3                        : E5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : E6        :        :                   :         : 8         :                
+energy_valid                 : E6        : output : 2.5 V             :         : 8         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : E7        :        :                   :         : 8         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8         :                
-energy_data[15]              : E9        : output : 2.5 V             :         : 7         : N              
-energy_data[11]              : E10       : output : 2.5 V             :         : 7         : N              
-energy_data[12]              : E11       : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E10       :        :                   :         : 7         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E11       :        :                   :         : 7         :                
 GNDA2                        : E12       : gnd    :                   :         :           :                
 GND                          : E13       : gnd    :                   :         :           :                
 VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
@@ -156,14 +156,14 @@ nSTATUS                      : F4        :        :                   :         
 VCCA3                        : F5        : power  :                   : 2.5V    :           :                
 GND                          : F6        : gnd    :                   :         :           :                
 VCCINT                       : F7        : power  :                   : 1.2V    :           :                
-energy_data[0]               : F8        : output : 2.5 V             :         : 8         : N              
-energy_data[1]               : F9        : output : 2.5 V             :         : 7         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F8        :        :                   :         : 8         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F9        :        :                   :         : 7         :                
 GND                          : F10       : gnd    :                   :         :           :                
 VCCINT                       : F11       : power  :                   : 1.2V    :           :                
 VCCA2                        : F12       : power  :                   : 2.5V    :           :                
-sample_data[8]               : F13       : input  : 2.5 V             :         : 6         : N              
-sample_data[3]               : F14       : input  : 2.5 V             :         : 6         : N              
-energy_data[4]               : F15       : output : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 6         :                
 ~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : G1        :        :                   :         : 1         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G2        :        :                   :         : 1         :                
@@ -179,8 +179,8 @@ GND                          : G11       : gnd    :                   :         
 MSEL2                        : G12       :        :                   :         : 6         :                
 GND                          : G13       : gnd    :                   :         :           :                
 VCCIO6                       : G14       : power  :                   : 2.5V    : 6         :                
-energy_data[14]              : G15       : output : 2.5 V             :         : 6         : N              
-sample_data[6]               : G16       : input  : 2.5 V             :         : 6         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 6         :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 6         :                
 ~ALTERA_DCLK~                : H1        : output : 2.5 V             :         : 1         : N              
 ~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V             :         : 1         : N              
 TCK                          : H3        : input  :                   :         : 1         :                
@@ -197,8 +197,8 @@ MSEL0                        : H13       :        :                   :         
 CONF_DONE                    : H14       :        :                   :         : 6         :                
 GND                          : H15       : gnd    :                   :         :           :                
 GND                          : H16       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J1        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J2        :        :                   :         : 2         :                
+energy_data[9]               : J1        : output : 2.5 V             :         : 2         : N              
+sample_valid                 : J2        : input  : 2.5 V             :         : 2         : N              
 nCE                          : J3        :        :                   :         : 1         :                
 TDO                          : J4        : output :                   :         : 1         :                
 TMS                          : J5        : input  :                   :         : 1         :                
@@ -209,15 +209,15 @@ GND                          : J9        : gnd    :                   :         
 GND                          : J10       : gnd    :                   :         :           :                
 GND                          : J11       : gnd    :                   :         :           :                
 VCCINT                       : J12       : power  :                   : 1.2V    :           :                
-sample_data[15]              : J13       : input  : 2.5 V             :         : 5         : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K1        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K2        :        :                   :         : 2         :                
+sample_data[5]               : K1        : input  : 2.5 V             :         : 2         : N              
+energy_data[5]               : K2        : output : 2.5 V             :         : 2         : N              
 VCCIO2                       : K3        : power  :                   : 2.5V    : 2         :                
 GND                          : K4        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 2         :                
+sample_data[1]               : K5        : input  : 2.5 V             :         : 2         : N              
 GND                          : K6        : gnd    :                   :         :           :                
 VCCINT                       : K7        : power  :                   : 1.2V    :           :                
 GND                          : K8        : gnd    :                   :         :           :                
@@ -229,14 +229,14 @@ GND                          : K13       : gnd    :                   :         
 VCCIO5                       : K14       : power  :                   : 2.5V    : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K15       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K16       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L1        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L2        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L3        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 2         :                
+sample_data[14]              : L1        : input  : 2.5 V             :         : 2         : N              
+sample_data[8]               : L2        : input  : 2.5 V             :         : 2         : N              
+energy_data[28]              : L3        : output : 2.5 V             :         : 2         : N              
+sample_data[4]               : L4        : input  : 2.5 V             :         : 2         : N              
 VCCA1                        : L5        : power  :                   : 2.5V    :           :                
 VCCINT                       : L6        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L7        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 3         :                
+energy_data[8]               : L7        : output : 2.5 V             :         : 3         : N              
+energy_data[6]               : L8        : output : 2.5 V             :         : 3         : N              
 GND                          : L9        : gnd    :                   :         :           :                
 GND                          : L10       : gnd    :                   :         :           :                
 GND                          : L11       : gnd    :                   :         :           :                
@@ -250,9 +250,9 @@ GND+                         : M2        :        :                   :         
 VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
 GND                          : M4        : gnd    :                   :         :           :                
 GNDA1                        : M5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M7        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 3         :                
+energy_data[24]              : M6        : output : 2.5 V             :         : 3         : N              
+energy_data[0]               : M7        : output : 2.5 V             :         : 3         : N              
+sample_data[11]              : M8        : input  : 2.5 V             :         : 3         : N              
 VCCINT                       : M9        : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : M10       :        :                   :         : 4         :                
 VCCINT                       : M11       : power  :                   : 1.2V    :           :                
@@ -261,15 +261,15 @@ GND                          : M13       : gnd    :                   :         
 VCCIO5                       : M14       : power  :                   : 2.5V    : 5         :                
 GND+                         : M15       :        :                   :         : 5         :                
 GND+                         : M16       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N1        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N2        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 3         :                
+energy_data[25]              : N1        : output : 2.5 V             :         : 2         : N              
+energy_data[13]              : N2        : output : 2.5 V             :         : 2         : N              
+sample_data[12]              : N3        : input  : 2.5 V             :         : 3         : N              
 VCCD_PLL1                    : N4        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N6        :        :                   :         : 3         :                
+energy_data[30]              : N5        : output : 2.5 V             :         : 3         : N              
+energy_data[21]              : N6        : output : 2.5 V             :         : 3         : N              
 GND                          : N7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 4         :                
+sample_data[15]              : N8        : input  : 2.5 V             :         : 3         : N              
+energy_data[3]               : N9        : output : 2.5 V             :         : 4         : N              
 GND                          : N10       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N11       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N12       :        :                   :         : 4         :                
@@ -277,15 +277,15 @@ VCCD_PLL4                    : N13       : power  :                   : 1.2V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : N14       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : N16       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P2        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P3        :        :                   :         : 3         :                
+sample_data[6]               : P1        : input  : 2.5 V             :         : 2         : N              
+sample_data[0]               : P2        : input  : 2.5 V             :         : 2         : N              
+energy_data[26]              : P3        : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : P4        : power  :                   : 2.5V    : 3         :                
 GND                          : P5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P6        :        :                   :         : 3         :                
+energy_data[1]               : P6        : output : 2.5 V             :         : 3         : N              
 VCCIO3                       : P7        : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P9        :        :                   :         : 4         :                
+energy_data[11]              : P8        : output : 2.5 V             :         : 3         : N              
+energy_data[12]              : P9        : output : 2.5 V             :         : 4         : N              
 VCCIO4                       : P10       : power  :                   : 2.5V    : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P11       :        :                   :         : 4         :                
 GND                          : P12       : gnd    :                   :         :           :                
@@ -293,35 +293,35 @@ VCCIO4                       : P13       : power  :                   : 2.5V    
 RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P15       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P16       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
+energy_data[14]              : R1        : output : 2.5 V             :         : 2         : N              
 GND                          : R2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R6        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3         :                
+energy_data[17]              : R3        : output : 2.5 V             :         : 3         : N              
+sample_data[13]              : R4        : input  : 2.5 V             :         : 3         : N              
+energy_data[16]              : R5        : output : 2.5 V             :         : 3         : N              
+energy_data[19]              : R6        : output : 2.5 V             :         : 3         : N              
+energy_data[22]              : R7        : output : 2.5 V             :         : 3         : N              
 GND+                         : R8        :        :                   :         : 3         :                
-GND+                         : R9        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 4         :                
+energy_ready                 : R9        : input  : 2.5 V             :         : 4         : N              
+energy_data[15]              : R10       : output : 2.5 V             :         : 4         : N              
+energy_data[7]               : R11       : output : 2.5 V             :         : 4         : N              
+sample_data[9]               : R12       : input  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 4         :                
 GND                          : R15       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5         :                
 VCCIO3                       : T1        : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T6        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3         :                
+energy_data[23]              : T2        : output : 2.5 V             :         : 3         : N              
+energy_data[20]              : T3        : output : 2.5 V             :         : 3         : N              
+sample_data[10]              : T4        : input  : 2.5 V             :         : 3         : N              
+energy_data[18]              : T5        : output : 2.5 V             :         : 3         : N              
+energy_data[29]              : T6        : output : 2.5 V             :         : 3         : N              
+energy_data[2]               : T7        : output : 2.5 V             :         : 3         : N              
 GND+                         : T8        :        :                   :         : 3         :                
-GND+                         : T9        :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T11       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T13       :        :                   :         : 4         :                
+nreset                       : T9        : input  : 2.5 V             :         : 4         : N              
+energy_data[4]               : T10       : output : 2.5 V             :         : 4         : N              
+sample_ready                 : T11       : output : 2.5 V             :         : 4         : N              
+sample_data[7]               : T12       : input  : 2.5 V             :         : 4         : N              
+sample_data[2]               : T13       : input  : 2.5 V             :         : 4         : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 4         :                
 VCCIO4                       : T16       : power  :                   : 2.5V    : 4         :                

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clap
-Sat Oct 15 18:22:46 2016
+Sat Oct 15 19:15:40 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -13,12 +13,16 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |ComputeEnergy
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. Analysis & Synthesis DSP Block Usage Summary
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |ComputeEnergy
+ 12. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
+ 13. lpm_mult Parameter Settings by Entity Instance
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+ 17. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,19 +49,19 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 15 18:22:46 2016       ;
+; Analysis & Synthesis Status        ; Successful - Sat Oct 15 19:15:40 2016       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; clap                                        ;
 ; Top-level Entity Name              ; ComputeEnergy                               ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 97                                          ;
-;     Total combinational functions  ; 81                                          ;
-;     Dedicated logic registers      ; 83                                          ;
-; Total registers                    ; 83                                          ;
-; Total pins                         ; 38                                          ;
+; Total logic elements               ; 129                                         ;
+;     Total combinational functions  ; 97                                          ;
+;     Dedicated logic registers      ; 115                                         ;
+; Total registers                    ; 115                                         ;
+; Total pins                         ; 54                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 2                                           ;
 ; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
@@ -160,13 +164,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                                  ; Library ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
-; ../hdl/ComputeEnergy.v           ; yes             ; User Verilog HDL File  ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v ;         ;
-+----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
+; ../hdl/ComputeEnergy.v           ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v             ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
+; aglobal160.inc                   ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc  ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/multcore.inc    ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/bypassff.inc    ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/altshift.inc    ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/db/mult_7dt.tdf         ;         ;
++----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -174,41 +185,61 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 97          ;
+; Estimated Total logic elements              ; 129         ;
 ;                                             ;             ;
-; Total combinational functions               ; 81          ;
+; Total combinational functions               ; 97          ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 10          ;
-;     -- 3 input functions                    ; 17          ;
+;     -- 4 input functions                    ; 11          ;
+;     -- 3 input functions                    ; 32          ;
 ;     -- <=2 input functions                  ; 54          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
 ;     -- normal mode                          ; 35          ;
-;     -- arithmetic mode                      ; 46          ;
+;     -- arithmetic mode                      ; 62          ;
 ;                                             ;             ;
-; Total registers                             ; 83          ;
-;     -- Dedicated logic registers            ; 83          ;
+; Total registers                             ; 115         ;
+;     -- Dedicated logic registers            ; 115         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 38          ;
+; I/O pins                                    ; 54          ;
 ;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
+; Embedded Multiplier 9-bit elements          ; 2           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 83          ;
-; Total fan-out                               ; 516         ;
-; Average fan-out                             ; 2.15        ;
+; Maximum fan-out                             ; 115         ;
+; Total fan-out                               ; 726         ;
+; Average fan-out                             ; 2.25        ;
 +---------------------------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name   ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
-; |ComputeEnergy             ; 81 (81)           ; 83 (83)      ; 0           ; 0            ; 0       ; 0         ; 38   ; 0            ; |ComputeEnergy      ; ComputeEnergy ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+---------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name   ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
+; |ComputeEnergy                  ; 97 (97)           ; 115 (115)    ; 0           ; 2            ; 0       ; 1         ; 54   ; 0            ; |ComputeEnergy                                        ; ComputeEnergy ; work         ;
+;    |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ComputeEnergy|lpm_mult:Mult0                         ; lpm_mult      ; work         ;
+;       |mult_7dt:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ComputeEnergy|lpm_mult:Mult0|mult_7dt:auto_generated ; mult_7dt      ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 1           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 2           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 1           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
 +------------------------------------------------------+
@@ -216,24 +247,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 83    ;
-; Number of registers using Synchronous Clear  ; 49    ;
+; Total registers                              ; 115   ;
+; Number of registers using Synchronous Clear  ; 65    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Clock Enable       ; 80    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |ComputeEnergy|sum_data[0]     ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |ComputeEnergy|sample_hold[15] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ComputeEnergy|sum_data[8]    ;
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |ComputeEnergy|sample_hold[6] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
 
 
 +-------------------------------------------------------------------------------+
@@ -242,10 +273,65 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Parameter Name ; Value ; Type                                                 ;
 +----------------+-------+------------------------------------------------------+
 ; SAMPLE_WIDTH   ; 16    ; Signed Integer                                       ;
-; ENERGY_WIDTH   ; 16    ; Signed Integer                                       ;
+; ENERGY_WIDTH   ; 32    ; Signed Integer                                       ;
 ; DURATION       ; 16    ; Signed Integer                                       ;
 +----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 16           ; Untyped             ;
+; LPM_WIDTHB                                     ; 16           ; Untyped             ;
+; LPM_WIDTHP                                     ; 32           ; Untyped             ;
+; LPM_WIDTHR                                     ; 32           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance         ;
++---------------------------------------+----------------+
+; Name                                  ; Value          ;
++---------------------------------------+----------------+
+; Number of entity instances            ; 1              ;
+; Entity Instance                       ; lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 16             ;
+;     -- LPM_WIDTHB                     ; 16             ;
+;     -- LPM_WIDTHP                     ; 32             ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
+;     -- INPUT_A_IS_CONSTANT            ; NO             ;
+;     -- INPUT_B_IS_CONSTANT            ; NO             ;
+;     -- USE_EAB                        ; OFF            ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
++---------------------------------------+----------------+
 
 
 +-----------------------------------------------------+
@@ -253,25 +339,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 38                          ;
-; cycloneiii_ff         ; 83                          ;
-;     ENA               ; 32                          ;
-;     ENA SCLR          ; 16                          ;
+; boundary_port         ; 54                          ;
+; cycloneiii_ff         ; 115                         ;
+;     ENA               ; 48                          ;
+;     ENA SCLR          ; 32                          ;
 ;     SCLR              ; 33                          ;
 ;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 82                          ;
-;     arith             ; 46                          ;
-;         2 data inputs ; 30                          ;
-;         3 data inputs ; 16                          ;
+; cycloneiii_lcell_comb ; 98                          ;
+;     arith             ; 62                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 31                          ;
 ;     normal            ; 36                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 23                          ;
+;         2 data inputs ; 22                          ;
 ;         3 data inputs ; 1                           ;
-;         4 data inputs ; 10                          ;
+;         4 data inputs ; 11                          ;
+; cycloneiii_mac_mult   ; 1                           ;
+; cycloneiii_mac_out    ; 1                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.37                        ;
+; Average LUT depth     ; 2.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -290,7 +378,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sat Oct 15 18:22:32 2016
+    Info: Processing started: Sat Oct 15 19:15:26 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clap -c clap
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineSuccessiveClapsAmount.v
@@ -308,19 +396,42 @@ Info (12021): Found 1 design units, including 1 entities, in source file /opt/Qu
 Info (12021): Found 1 design units, including 1 entities, in source file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/driver.v
     Info (12023): Found entity 1: driver File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/driver.v Line: 8
 Info (12127): Elaborating entity "ComputeEnergy" for the top level hierarchy
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 52
+Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 52
+Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 52
+    Info (12134): Parameter "LPM_WIDTHA" = "16"
+    Info (12134): Parameter "LPM_WIDTHB" = "16"
+    Info (12134): Parameter "LPM_WIDTHP" = "32"
+    Info (12134): Parameter "LPM_WIDTHR" = "32"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
+    Info (12023): Found entity 1: mult_7dt File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/db/mult_7dt.tdf Line: 29
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "sample_ready" is stuck at VCC File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 14
 Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/output_files/clap.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 135 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 185 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 20 input pins
-    Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 97 logic cells
+    Info (21059): Implemented 34 output pins
+    Info (21061): Implemented 129 logic cells
+    Info (21062): Implemented 2 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 1229 megabytes
-    Info: Processing ended: Sat Oct 15 18:22:46 2016
+    Info: Peak virtual memory: 1250 megabytes
+    Info: Processing ended: Sat Oct 15 19:15:40 2016
     Info: Elapsed time: 00:00:14
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Total CPU time (on all processors): 00:00:33
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/output_files/clap.map.smsg.
 
 
