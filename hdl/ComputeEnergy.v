@@ -28,7 +28,6 @@ module ComputeEnergy #
 	always @( posedge clock )
 		if ( nreset==0 )
 			begin
-				sample_hold <= 0;
 				sum_valid <= 0;
 			end
 		else if ( sample_valid==1 && sample_ready==1 )
@@ -66,9 +65,9 @@ module ComputeEnergy #
 			
 	always @( posedge clock )
 		if ( nreset==0 )
-			sum_nreset <= !(sum_counter==(DURATION-1)); 
-		else
 			sum_nreset <= 0;
+		else
+			sum_nreset <= !(sum_counter==(DURATION-1)); 
 
 	
 endmodule 

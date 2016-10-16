@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sat Oct 15 19:15:48 2016
+Fitter Status : Successful - Sun Oct 16 11:58:22 2016
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : clap
-Top-level Entity Name : ComputeEnergy
+Top-level Entity Name : top
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 128 / 22,320 ( < 1 % )
-    Total combinational functions : 97 / 22,320 ( < 1 % )
-    Dedicated logic registers : 100 / 22,320 ( < 1 % )
-Total registers : 100
-Total pins : 54 / 154 ( 35 % )
+Total logic elements : 26 / 22,320 ( < 1 % )
+    Total combinational functions : 24 / 22,320 ( < 1 % )
+    Dedicated logic registers : 19 / 22,320 ( < 1 % )
+Total registers : 19
+Total pins : 8 / 154 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
-Embedded Multiplier 9-bit elements : 2 / 132 ( 2 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
 Total PLLs : 0 / 4 ( 0 % )

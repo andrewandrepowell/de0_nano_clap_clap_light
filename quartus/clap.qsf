@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY ComputeEnergy
+set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 16.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:26:45  OCTOBER 15, 2016"
 set_global_assignment -name LAST_QUARTUS_VERSION 16.0.0
@@ -55,6 +55,8 @@ set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -sectio
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -section_id eda_simulation
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE ../hdl/top.v
+set_global_assignment -name VERILOG_FILE ../hdl/ToggleLight.v
 set_global_assignment -name VERILOG_FILE ../hdl/DetermineSuccessiveClapsAmount.v
 set_global_assignment -name VERILOG_FILE ../hdl/DetermineClap.v
 set_global_assignment -name VERILOG_FILE ../hdl/ComputeEnergy.v

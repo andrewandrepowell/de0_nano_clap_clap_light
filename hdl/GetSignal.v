@@ -24,9 +24,9 @@ module GetSignal #
         input wire spi_data
     );
 
-    wire pmodmic2driver_ready;
-    wire pmodmic2driver_valid;
-    wire [ C_M00_AXIS_TDATA_WIDTH-1:0 ] pmodmic2driver_data;
+    wire spi2driver_ready;
+    wire spi2driver_valid;
+    wire [ C_M00_AXIS_TDATA_WIDTH-1:0 ] spi2driver_data;
     
     wire driver2fifo_valid;
     wire [ C_M00_AXIS_TDATA_WIDTH-1:0 ] driver2fifo_data;
@@ -41,18 +41,18 @@ module GetSignal #
         .spi_clock( spi_clock ),
         .spi_chipselect( spi_chipselect ),
         .spi_data( spi_data ),
-        .axis_master_ready( pmodmic2driver_ready ),
-        .axis_master_valid( pmodmic2driver_valid ),
-        .axis_master_data( pmodmic2driver_data ) );
+        .axis_master_ready( spi2driver_ready ),
+        .axis_master_valid( spi2driver_valid ),
+        .axis_master_data( spi2driver_data ) );
         
     driver #(
         .GRAB_TRIG( GRAB_TRIG ),
         .SAMPLE_WIDTH( C_M00_AXIS_TDATA_WIDTH )
     ) driver_inst (
         .clock( m00_axis_aclk ),
-        .axis_slave_ready( pmodmic2driver_ready ),
-        .axis_slave_valid( pmodmic2driver_valid ),
-        .axis_slave_data( pmodmic2driver_data ),
+        .axis_slave_ready( spi2driver_ready ),
+        .axis_slave_valid( spi2driver_valid ),
+        .axis_slave_data( spi2driver_data ),
         .axis_master_valid( driver2fifo_valid ),
         .axis_master_data( driver2fifo_data ) );
         

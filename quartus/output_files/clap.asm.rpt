@@ -1,5 +1,5 @@
 Assembler report for clap
-Sat Oct 15 19:15:51 2016
+Sun Oct 16 11:58:24 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -38,9 +38,9 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Oct 15 19:15:51 2016 ;
+; Assembler Status      ; Successful - Sun Oct 16 11:58:24 2016 ;
 ; Revision Name         ; clap                                  ;
-; Top-level Entity Name ; ComputeEnergy                         ;
+; Top-level Entity Name ; top                                   ;
 ; Family                ; Cyclone IV E                          ;
 ; Device                ; EP4CE22F17C6                          ;
 +-----------------------+---------------------------------------+
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting           ;
 +----------------+-------------------+
 ; Device         ; EP4CE22F17C6      ;
-; JTAG usercode  ; 0x0014792A        ;
-; Checksum       ; 0x0014792A        ;
+; JTAG usercode  ; 0x0013774E        ;
+; Checksum       ; 0x0013774E        ;
 +----------------+-------------------+
 
 
@@ -79,14 +79,14 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sat Oct 15 19:15:49 2016
+    Info: Processing started: Sun Oct 16 11:58:23 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off clap -c clap
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1069 megabytes
-    Info: Processing ended: Sat Oct 15 19:15:51 2016
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 1068 megabytes
+    Info: Processing ended: Sun Oct 16 11:58:24 2016
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

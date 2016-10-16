@@ -1,5 +1,5 @@
 Analysis & Synthesis report for clap
-Sat Oct 15 19:15:40 2016
+Sun Oct 16 12:09:11 2016
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -14,15 +14,26 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis DSP Block Usage Summary
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Parameter Settings for User Entity Instance: Top-level Entity: |ComputeEnergy
- 12. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 13. lpm_mult Parameter Settings by Entity Instance
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+  9. State Machine - |top|DetermineClap:DetermineClap_inst|lohi_state
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst
+ 14. Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|spimaster:spimaster_inst
+ 15. Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|driver:driver_inst
+ 16. Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|fifo:fifo_inst
+ 17. Parameter Settings for User Entity Instance: ComputeEnergy:ComputeEnergy_inst
+ 18. Parameter Settings for User Entity Instance: DetermineClap:DetermineClap_inst
+ 19. Parameter Settings for User Entity Instance: DetermineSuccessiveClapsAmount:DetermineSuccessiveClapsAmount_inst
+ 20. Parameter Settings for User Entity Instance: ToggleLight:ToggleLight_inst
+ 21. Parameter Settings for Inferred Entity Instance: ComputeEnergy:ComputeEnergy_inst|lpm_mult:Mult0
+ 22. lpm_mult Parameter Settings by Entity Instance
+ 23. Port Connectivity Checks: "GetSignal:GetSignal_inst|fifo:fifo_inst"
+ 24. Port Connectivity Checks: "GetSignal:GetSignal_inst"
+ 25. Post-Synthesis Netlist Statistics for Top Partition
+ 26. Elapsed Time Per Partition
+ 27. Analysis & Synthesis Messages
+ 28. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -49,16 +60,16 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Oct 15 19:15:40 2016       ;
+; Analysis & Synthesis Status        ; Successful - Sun Oct 16 12:09:11 2016       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; clap                                        ;
-; Top-level Entity Name              ; ComputeEnergy                               ;
+; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 129                                         ;
-;     Total combinational functions  ; 97                                          ;
-;     Dedicated logic registers      ; 115                                         ;
-; Total registers                    ; 115                                         ;
-; Total pins                         ; 54                                          ;
+; Total logic elements               ; 583                                         ;
+;     Total combinational functions  ; 320                                         ;
+;     Dedicated logic registers      ; 434                                         ;
+; Total registers                    ; 434                                         ;
+; Total pins                         ; 6                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 2                                           ;
@@ -72,7 +83,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                                      ; ComputeEnergy      ; clap               ;
+; Top-level entity name                                                      ; top                ; clap               ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -164,20 +175,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                  ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                              ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
-; ../hdl/ComputeEnergy.v           ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v             ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
-; aglobal160.inc                   ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc  ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/multcore.inc    ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/bypassff.inc    ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/altshift.inc    ;         ;
-; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/db/mult_7dt.tdf         ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                              ;
++-----------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path        ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                   ; Library ;
++-----------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
+; ../hdl/top.v                            ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/top.v                            ;         ;
+; ../hdl/ToggleLight.v                    ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ToggleLight.v                    ;         ;
+; ../hdl/DetermineSuccessiveClapsAmount.v ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineSuccessiveClapsAmount.v ;         ;
+; ../hdl/DetermineClap.v                  ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineClap.v                  ;         ;
+; ../hdl/ComputeEnergy.v                  ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v                  ;         ;
+; ../hdl/spimaster.v                      ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/spimaster.v                      ;         ;
+; ../hdl/GetSignal.v                      ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/GetSignal.v                      ;         ;
+; ../hdl/fifo.v                           ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v                           ;         ;
+; ../hdl/driver.v                         ; yes             ; User Verilog HDL File        ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/driver.v                         ;         ;
+; lpm_mult.tdf                            ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/lpm_mult.tdf         ;         ;
+; aglobal160.inc                          ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/aglobal160.inc       ;         ;
+; lpm_add_sub.inc                         ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/lpm_add_sub.inc      ;         ;
+; multcore.inc                            ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/multcore.inc         ;         ;
+; bypassff.inc                            ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/bypassff.inc         ;         ;
+; altshift.inc                            ; yes             ; Megafunction                 ; /home/andrewandrepowell2/altera_lite/16.0/quartus/libraries/megafunctions/altshift.inc         ;         ;
+; db/mult_7dt.tdf                         ; yes             ; Auto-Generated Megafunction  ; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/db/mult_7dt.tdf              ;         ;
++-----------------------------------------+-----------------+------------------------------+------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -185,42 +204,50 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 129         ;
+; Estimated Total logic elements              ; 583         ;
 ;                                             ;             ;
-; Total combinational functions               ; 97          ;
+; Total combinational functions               ; 320         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 11          ;
-;     -- 3 input functions                    ; 32          ;
-;     -- <=2 input functions                  ; 54          ;
+;     -- 4 input functions                    ; 135         ;
+;     -- 3 input functions                    ; 91          ;
+;     -- <=2 input functions                  ; 94          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 35          ;
-;     -- arithmetic mode                      ; 62          ;
+;     -- normal mode                          ; 218         ;
+;     -- arithmetic mode                      ; 102         ;
 ;                                             ;             ;
-; Total registers                             ; 115         ;
-;     -- Dedicated logic registers            ; 115         ;
+; Total registers                             ; 434         ;
+;     -- Dedicated logic registers            ; 434         ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 54          ;
+; I/O pins                                    ; 6           ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 2           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; clock~input ;
-; Maximum fan-out                             ; 115         ;
-; Total fan-out                               ; 726         ;
-; Average fan-out                             ; 2.25        ;
+; Maximum fan-out                             ; 413         ;
+; Total fan-out                               ; 2357        ;
+; Average fan-out                             ; 3.07        ;
 +---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
-; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name   ; Library Name ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
-; |ComputeEnergy                  ; 97 (97)           ; 115 (115)    ; 0           ; 2            ; 0       ; 1         ; 54   ; 0            ; |ComputeEnergy                                        ; ComputeEnergy ; work         ;
-;    |lpm_mult:Mult0|             ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ComputeEnergy|lpm_mult:Mult0                         ; lpm_mult      ; work         ;
-;       |mult_7dt:auto_generated| ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |ComputeEnergy|lpm_mult:Mult0|mult_7dt:auto_generated ; mult_7dt      ; work         ;
-+---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+---------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                ;
++-------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------+--------------------------------+--------------+
+; Compilation Hierarchy Node                                              ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                          ; Entity Name                    ; Library Name ;
++-------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------+--------------------------------+--------------+
+; |top                                                                    ; 320 (0)           ; 434 (0)      ; 0           ; 2            ; 0       ; 1         ; 6    ; 0            ; |top                                                                         ; top                            ; work         ;
+;    |ComputeEnergy:ComputeEnergy_inst|                                   ; 83 (83)           ; 121 (121)    ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |top|ComputeEnergy:ComputeEnergy_inst                                        ; ComputeEnergy                  ; work         ;
+;       |lpm_mult:Mult0|                                                  ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |top|ComputeEnergy:ComputeEnergy_inst|lpm_mult:Mult0                         ; lpm_mult                       ; work         ;
+;          |mult_7dt:auto_generated|                                      ; 0 (0)             ; 0 (0)        ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |top|ComputeEnergy:ComputeEnergy_inst|lpm_mult:Mult0|mult_7dt:auto_generated ; mult_7dt                       ; work         ;
+;    |DetermineClap:DetermineClap_inst|                                   ; 64 (64)           ; 60 (60)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|DetermineClap:DetermineClap_inst                                        ; DetermineClap                  ; work         ;
+;    |DetermineSuccessiveClapsAmount:DetermineSuccessiveClapsAmount_inst| ; 30 (30)           ; 43 (43)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|DetermineSuccessiveClapsAmount:DetermineSuccessiveClapsAmount_inst      ; DetermineSuccessiveClapsAmount ; work         ;
+;    |GetSignal:GetSignal_inst|                                           ; 136 (0)           ; 192 (0)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|GetSignal:GetSignal_inst                                                ; GetSignal                      ; work         ;
+;       |driver:driver_inst|                                              ; 14 (14)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|GetSignal:GetSignal_inst|driver:driver_inst                             ; driver                         ; work         ;
+;       |fifo:fifo_inst|                                                  ; 110 (110)         ; 140 (140)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|GetSignal:GetSignal_inst|fifo:fifo_inst                                 ; fifo                           ; work         ;
+;       |spimaster:spimaster_inst|                                        ; 12 (12)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|GetSignal:GetSignal_inst|spimaster:spimaster_inst                       ; spimaster                      ; work         ;
+;    |ToggleLight:ToggleLight_inst|                                       ; 7 (7)             ; 18 (18)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|ToggleLight:ToggleLight_inst                                            ; ToggleLight                    ; work         ;
++-------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------------------------------+--------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -242,96 +269,228 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
 
 
+Encoding Type:  One-Hot
++-------------------------------------------------------------------------------------------------+
+; State Machine - |top|DetermineClap:DetermineClap_inst|lohi_state                                ;
++------------------------+-----------------------+------------------------+-----------------------+
+; Name                   ; lohi_state.LOHI_S_LOW ; lohi_state.LOHI_S_HIGH ; lohi_state.LOHI_S_MID ;
++------------------------+-----------------------+------------------------+-----------------------+
+; lohi_state.LOHI_S_MID  ; 0                     ; 0                      ; 0                     ;
+; lohi_state.LOHI_S_LOW  ; 1                     ; 0                      ; 1                     ;
+; lohi_state.LOHI_S_HIGH ; 0                     ; 1                      ; 1                     ;
++------------------------+-----------------------+------------------------+-----------------------+
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 115   ;
-; Number of registers using Synchronous Clear  ; 65    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Total registers                              ; 434   ;
+; Number of registers using Synchronous Clear  ; 104   ;
+; Number of registers using Synchronous Load   ; 2     ;
+; Number of registers using Asynchronous Clear ; 5     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 80    ;
+; Number of registers using Clock Enable       ; 359   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |ComputeEnergy|sum_data[8]    ;
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |ComputeEnergy|sample_hold[6] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++---------------------------------------------------------------+
+; Inverted Register Statistics                                  ;
++-----------------------------------------------------+---------+
+; Inverted Register                                   ; Fan out ;
++-----------------------------------------------------+---------+
+; GetSignal:GetSignal_inst|fifo:fifo_inst|free_cnt[3] ; 1       ;
+; Total number of inverted registers = 1              ;         ;
++-----------------------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top|DetermineSuccessiveClapsAmount:DetermineSuccessiveClapsAmount_inst|suc_claps_amt[8] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |top|GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_cnt[1]                        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |top|DetermineSuccessiveClapsAmount:DetermineSuccessiveClapsAmount_inst|energy_amt[1]    ;
+; 3:1                ; 35 bits   ; 70 LEs        ; 35 LEs               ; 35 LEs                 ; Yes        ; |top|ComputeEnergy:ComputeEnergy_inst|sum_data[25]                                       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |top|GetSignal:GetSignal_inst|fifo:fifo_inst|wr_addr[1]                                  ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; Yes        ; |top|DetermineClap:DetermineClap_inst|lohi_high_amt_buff[6]                              ;
+; 7:1                ; 4 bits    ; 16 LEs        ; 12 LEs               ; 4 LEs                  ; Yes        ; |top|DetermineClap:DetermineClap_inst|lohi_low_amt[3]                                    ;
+; 8:1                ; 7 bits    ; 35 LEs        ; 14 LEs               ; 21 LEs                 ; Yes        ; |top|DetermineClap:DetermineClap_inst|lohi_high_amt[6]                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst ;
++------------------------+-------+--------------------------------------+
+; Parameter Name         ; Value ; Type                                 ;
++------------------------+-------+--------------------------------------+
+; CLK_TRIG               ; 2     ; Signed Integer                       ;
+; GRAB_TRIG              ; 128   ; Signed Integer                       ;
+; RAM_ADDR_WIDTH         ; 3     ; Signed Integer                       ;
+; C_M00_AXIS_TDATA_WIDTH ; 16    ; Signed Integer                       ;
++------------------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|spimaster:spimaster_inst ;
++----------------+-------+-----------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                  ;
++----------------+-------+-----------------------------------------------------------------------+
+; CLK_TRIG       ; 2     ; Signed Integer                                                        ;
+; SAMPLE_WIDTH   ; 16    ; Signed Integer                                                        ;
++----------------+-------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|driver:driver_inst ;
++----------------+-------+-----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                            ;
++----------------+-------+-----------------------------------------------------------------+
+; GRAB_TRIG      ; 128   ; Signed Integer                                                  ;
+; SAMPLE_WIDTH   ; 16    ; Signed Integer                                                  ;
++----------------+-------+-----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|fifo:fifo_inst ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; RAM_ADDR_WIDTH ; 3     ; Signed Integer                                              ;
+; FIFO_WIDTH     ; 16    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |ComputeEnergy ;
+; Parameter Settings for User Entity Instance: ComputeEnergy:ComputeEnergy_inst ;
 +----------------+-------+------------------------------------------------------+
 ; Parameter Name ; Value ; Type                                                 ;
 +----------------+-------+------------------------------------------------------+
 ; SAMPLE_WIDTH   ; 16    ; Signed Integer                                       ;
-; ENERGY_WIDTH   ; 32    ; Signed Integer                                       ;
-; DURATION       ; 16    ; Signed Integer                                       ;
+; ENERGY_WIDTH   ; 35    ; Signed Integer                                       ;
+; DURATION       ; 4     ; Signed Integer                                       ;
 +----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
-+------------------------------------------------+--------------+---------------------+
-; Parameter Name                                 ; Value        ; Type                ;
-+------------------------------------------------+--------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 16           ; Untyped             ;
-; LPM_WIDTHB                                     ; 16           ; Untyped             ;
-; LPM_WIDTHP                                     ; 32           ; Untyped             ;
-; LPM_WIDTHR                                     ; 32           ; Untyped             ;
-; LPM_WIDTHS                                     ; 1            ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
-; LPM_PIPELINE                                   ; 0            ; Untyped             ;
-; LATENCY                                        ; 0            ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
-; USE_EAB                                        ; OFF          ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 6            ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
-+------------------------------------------------+--------------+---------------------+
++-------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DetermineClap:DetermineClap_inst ;
++----------------+-------+------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                 ;
++----------------+-------+------------------------------------------------------+
+; ENERGY_WIDTH   ; 35    ; Signed Integer                                       ;
+; K_H            ; 128   ; Signed Integer                                       ;
+; K_L            ; 32    ; Signed Integer                                       ;
+; N_L            ; 12    ; Signed Integer                                       ;
+; N_H            ; 64    ; Signed Integer                                       ;
++----------------+-------+------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 1              ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 16             ;
-;     -- LPM_WIDTHB                     ; 16             ;
-;     -- LPM_WIDTHP                     ; 32             ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DetermineSuccessiveClapsAmount:DetermineSuccessiveClapsAmount_inst ;
++-----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name  ; Value ; Type                                                                                  ;
++-----------------+-------+---------------------------------------------------------------------------------------+
+; SUC_CLAPS_WIDTH ; 16    ; Signed Integer                                                                        ;
+; N_D             ; 12    ; Signed Integer                                                                        ;
+; N_CLAP          ; 76    ; Signed Integer                                                                        ;
++-----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ToggleLight:ToggleLight_inst ;
++-----------------+-------+-------------------------------------------------+
+; Parameter Name  ; Value ; Type                                            ;
++-----------------+-------+-------------------------------------------------+
+; SUC_CLAPS_WIDTH ; 16    ; Signed Integer                                  ;
+; TOGLITE_ON_VAL  ; 1     ; Signed Integer                                  ;
+; TOGLITE_OFF_VAL ; 2     ; Signed Integer                                  ;
++-----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: ComputeEnergy:ComputeEnergy_inst|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+----------------------------------+
+; Parameter Name                                 ; Value        ; Type                             ;
++------------------------------------------------+--------------+----------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                   ;
+; LPM_WIDTHA                                     ; 16           ; Untyped                          ;
+; LPM_WIDTHB                                     ; 16           ; Untyped                          ;
+; LPM_WIDTHP                                     ; 32           ; Untyped                          ;
+; LPM_WIDTHR                                     ; 32           ; Untyped                          ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                          ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                          ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                          ;
+; LATENCY                                        ; 0            ; Untyped                          ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                          ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                          ;
+; USE_EAB                                        ; OFF          ; Untyped                          ;
+; MAXIMIZE_SPEED                                 ; 6            ; Untyped                          ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                          ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                          ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K              ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                          ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                          ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                          ;
+; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped                          ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                          ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                          ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                          ;
++------------------------------------------------+--------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                          ;
++---------------------------------------+-------------------------------------------------+
+; Name                                  ; Value                                           ;
++---------------------------------------+-------------------------------------------------+
+; Number of entity instances            ; 1                                               ;
+; Entity Instance                       ; ComputeEnergy:ComputeEnergy_inst|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 16                                              ;
+;     -- LPM_WIDTHB                     ; 16                                              ;
+;     -- LPM_WIDTHP                     ; 32                                              ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                        ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                              ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                              ;
+;     -- USE_EAB                        ; OFF                                             ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                            ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                              ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                              ;
++---------------------------------------+-------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "GetSignal:GetSignal_inst|fifo:fifo_inst"                                                                                                                                                ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; in_ack    ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
++-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------+
+; Port Connectivity Checks: "GetSignal:GetSignal_inst"        ;
++----------------+--------+----------+------------------------+
+; Port           ; Type   ; Severity ; Details                ;
++----------------+--------+----------+------------------------+
+; m00_axis_tstrb ; Output ; Info     ; Explicitly unconnected ;
++----------------+--------+----------+------------------------+
 
 
 +-----------------------------------------------------+
@@ -339,27 +498,28 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 54                          ;
-; cycloneiii_ff         ; 115                         ;
-;     ENA               ; 48                          ;
-;     ENA SCLR          ; 32                          ;
-;     SCLR              ; 33                          ;
-;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 98                          ;
-;     arith             ; 62                          ;
-;         2 data inputs ; 31                          ;
-;         3 data inputs ; 31                          ;
-;     normal            ; 36                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 22                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 11                          ;
+; boundary_port         ; 6                           ;
+; cycloneiii_ff         ; 434                         ;
+;     CLR               ; 5                           ;
+;     ENA               ; 298                         ;
+;     ENA SCLR          ; 61                          ;
+;     SCLR              ; 43                          ;
+;     SLD               ; 2                           ;
+;     plain             ; 25                          ;
+; cycloneiii_lcell_comb ; 321                         ;
+;     arith             ; 102                         ;
+;         2 data inputs ; 69                          ;
+;         3 data inputs ; 33                          ;
+;     normal            ; 219                         ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 17                          ;
+;         3 data inputs ; 58                          ;
+;         4 data inputs ; 135                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.10                        ;
-; Average LUT depth     ; 2.22                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.48                        ;
 +-----------------------+-----------------------------+
 
 
@@ -368,7 +528,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -378,9 +538,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sat Oct 15 19:15:26 2016
+    Info: Processing started: Sun Oct 16 12:08:57 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clap -c clap
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/top.v
+    Info (12023): Found entity 1: top File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/top.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ToggleLight.v
+    Info (12023): Found entity 1: ToggleLight File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ToggleLight.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineSuccessiveClapsAmount.v
     Info (12023): Found entity 1: DetermineSuccessiveClapsAmount File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineSuccessiveClapsAmount.v Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineClap.v
@@ -395,11 +559,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file /opt/Qu
     Info (12023): Found entity 1: fifo File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/driver.v
     Info (12023): Found entity 1: driver File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/driver.v Line: 8
-Info (12127): Elaborating entity "ComputeEnergy" for the top level hierarchy
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "GetSignal" for hierarchy "GetSignal:GetSignal_inst" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/top.v Line: 64
+Info (12128): Elaborating entity "spimaster" for hierarchy "GetSignal:GetSignal_inst|spimaster:spimaster_inst" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/GetSignal.v Line: 46
+Warning (10230): Verilog HDL assignment warning at spimaster.v(76): truncated value with size 32 to match size of target (2) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/spimaster.v Line: 76
+Warning (10230): Verilog HDL assignment warning at spimaster.v(95): truncated value with size 32 to match size of target (5) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/spimaster.v Line: 95
+Info (12128): Elaborating entity "driver" for hierarchy "GetSignal:GetSignal_inst|driver:driver_inst" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/GetSignal.v Line: 57
+Warning (10230): Verilog HDL assignment warning at driver.v(47): truncated value with size 32 to match size of target (8) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/driver.v Line: 47
+Info (12128): Elaborating entity "fifo" for hierarchy "GetSignal:GetSignal_inst|fifo:fifo_inst" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/GetSignal.v Line: 71
+Warning (10230): Verilog HDL assignment warning at fifo.v(42): truncated value with size 32 to match size of target (4) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 42
+Warning (10230): Verilog HDL assignment warning at fifo.v(45): truncated value with size 32 to match size of target (1) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 45
+Warning (10230): Verilog HDL assignment warning at fifo.v(46): truncated value with size 32 to match size of target (1) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 46
+Warning (10230): Verilog HDL assignment warning at fifo.v(55): truncated value with size 32 to match size of target (4) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 55
+Warning (10230): Verilog HDL assignment warning at fifo.v(64): truncated value with size 32 to match size of target (3) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 64
+Warning (10230): Verilog HDL assignment warning at fifo.v(65): truncated value with size 32 to match size of target (4) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 65
+Warning (10230): Verilog HDL assignment warning at fifo.v(69): truncated value with size 32 to match size of target (3) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 69
+Warning (10230): Verilog HDL assignment warning at fifo.v(70): truncated value with size 32 to match size of target (4) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 70
+Info (12128): Elaborating entity "ComputeEnergy" for hierarchy "ComputeEnergy:ComputeEnergy_inst" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/top.v Line: 82
+Info (12128): Elaborating entity "DetermineClap" for hierarchy "DetermineClap:DetermineClap_inst" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/top.v Line: 101
+Warning (10230): Verilog HDL assignment warning at DetermineClap.v(96): truncated value with size 32 to match size of target (4) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineClap.v Line: 96
+Warning (10230): Verilog HDL assignment warning at DetermineClap.v(107): truncated value with size 32 to match size of target (7) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineClap.v Line: 107
+Info (12128): Elaborating entity "DetermineSuccessiveClapsAmount" for hierarchy "DetermineSuccessiveClapsAmount:DetermineSuccessiveClapsAmount_inst" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/top.v Line: 120
+Warning (10230): Verilog HDL assignment warning at DetermineSuccessiveClapsAmount.v(55): truncated value with size 32 to match size of target (7) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineSuccessiveClapsAmount.v Line: 55
+Warning (10230): Verilog HDL assignment warning at DetermineSuccessiveClapsAmount.v(68): truncated value with size 32 to match size of target (16) File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineSuccessiveClapsAmount.v Line: 68
+Info (12128): Elaborating entity "ToggleLight" for hierarchy "ToggleLight:ToggleLight_inst" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/top.v Line: 136
+Info (276014): Found 1 instances of uninferred RAM logic
+    Info (276004): RAM logic "GetSignal:GetSignal_inst|fifo:fifo_inst|data_fifo" is uninferred due to inappropriate RAM size File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 27
 Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 52
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 52
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 52
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "ComputeEnergy:ComputeEnergy_inst|Mult0" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 51
+Info (12130): Elaborated megafunction instantiation "ComputeEnergy:ComputeEnergy_inst|lpm_mult:Mult0" File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 51
+Info (12133): Instantiated megafunction "ComputeEnergy:ComputeEnergy_inst|lpm_mult:Mult0" with the following parameter: File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 51
     Info (12134): Parameter "LPM_WIDTHA" = "16"
     Info (12134): Parameter "LPM_WIDTHB" = "16"
     Info (12134): Parameter "LPM_WIDTHP" = "32"
@@ -411,20 +600,19 @@ Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following para
     Info (12134): Parameter "MAXIMIZE_SPEED" = "6"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
     Info (12023): Found entity 1: mult_7dt File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/db/mult_7dt.tdf Line: 29
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "sample_ready" is stuck at VCC File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 14
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (144001): Generated suppressed messages file /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/output_files/clap.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 185 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 20 input pins
-    Info (21059): Implemented 34 output pins
-    Info (21061): Implemented 129 logic cells
+Info (21057): Implemented 595 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 3 output pins
+    Info (21061): Implemented 587 logic cells
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 1250 megabytes
-    Info: Processing ended: Sat Oct 15 19:15:40 2016
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 1254 megabytes
+    Info: Processing ended: Sun Oct 16 12:09:11 2016
     Info: Elapsed time: 00:00:14
     Info: Total CPU time (on all processors): 00:00:33
 
