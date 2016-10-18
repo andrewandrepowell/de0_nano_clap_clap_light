@@ -1,0 +1,24 @@
+INSTUPacquire_data
+/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/acquire_data/acquire_data.py
+INFOS:&&1|1|2|0&&2|3|2|1&&3|4|2|5&&2|6|2|1&&2|7|2|1&&2|8|2|0&&3|9|2|0&&3|10|2|0&&3|11|2|0&&3|12|2|0&&3|13|2|0&&3|14|2|0&&3|15|2|0&&3|16|2|0&&3|17|2|0&&3|18|2|0&&3|19|2|0&&3|20|2|0&&3|19|2|0&&3|19|2|0&&3|21|2|0
+DATA_TRIALS=14
+socket_wrap.__init__=5
+fname=21
+acquire_data=2
+data=19
+d=20
+NUMPY_DATA_DT=18
+AUDIO_SAMPLE_RATE=12
+AUDIO_BUFFER_SIZE=9
+AUDIO_GET_SIGNAL_GRAB_TRIG=10
+__enter__=6
+TCP_RCBUF_SIZE=17
+int2bytearray=8
+DATA_CLAPS=13
+TCP_IP_ADDR=15
+s=4
+AUDIO_GET_SIGNAL_CLOCK=11
+socket_wrap=1
+TCP_PORT=16
+__exit__=7
+__init__=3
