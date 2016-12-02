@@ -51,8 +51,6 @@ if __name__ == '__main__':
         # Set the receive buffer size.
         soc_obj.setsockopt( socket.SOL_SOCKET, socket.SO_RCVBUF, TCP_RCBUF_SIZE )
         
-        soc_obj.setblocking( True )
-        
         # Gather data based on number of claps and trial.
         for ( nclap, ntrial ) in itertools.product( DATA_CLAPS, DATA_TRIALS ):
         
@@ -70,7 +68,6 @@ if __name__ == '__main__':
             while len(data) < TCP_RCBUF_SIZE:
                 d = soc_obj.recv( TCP_RCBUF_SIZE-len(data) )
                 data += d
-                print(len(data))
             data = bytearray( data )
             
             # Convert the data back to its original type.

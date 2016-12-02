@@ -2733,8 +2733,10 @@ conda.console|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/con
 conda.core.__init__|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/core/__init__.py
 conda.egg_info|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/egg_info.py
 conda.exceptions|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/exceptions.py
+conda.exports|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/exports.py
 conda.fetch|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/fetch.py
 conda.gateways.__init__|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/gateways/__init__.py
+conda.gateways.anaconda_client|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/gateways/anaconda_client.py
 conda.gateways.logging|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/gateways/logging.py
 conda.history|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/history.py
 conda.install|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/conda/install.py
@@ -3670,6 +3672,7 @@ gevent.win32util|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/
 gevent.wsgi|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/gevent/wsgi.py
 gi
 glob|/home/andrewandrepowell2/anaconda2/lib/python2.7/glob.py
+glpk|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/glpk.so
 greenlet|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/greenlet.so
 grin|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/grin.py
 grp|/home/andrewandrepowell2/anaconda2/lib/python2.7/lib-dynload/grp.so
@@ -7618,6 +7621,7 @@ pylint.reporters.ureports.nodes|/home/andrewandrepowell2/anaconda2/lib/python2.7
 pylint.reporters.ureports.text_writer|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/pylint/reporters/ureports/text_writer.py
 pylint.testutils|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/pylint/testutils.py
 pylint.utils|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/pylint/utils.py
+pymprog|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/pymprog.py
 pyparsing|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/pyparsing.py
 pytest|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/pytest.py
 pytz.__init__|/home/andrewandrepowell2/anaconda2/lib/python2.7/site-packages/pytz/__init__.py
