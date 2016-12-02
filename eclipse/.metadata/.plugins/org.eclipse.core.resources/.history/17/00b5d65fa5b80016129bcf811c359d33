@@ -1,0 +1,33 @@
+'''
+Created on Dec 2, 2016
+
+@author: andrewandrepowell2
+'''
+
+import numpy, sounddevice, itertools, os
+from matplotlib import pyplot
+
+if __name__ == '__main__':
+    
+    # Define the constants for the script.
+    FILE_LOC = '../acquire_data'
+    FILE_NCLAP = 2
+    FILE_NTRIAL = 0
+    FILE_NAME = 'nclap_' + repr( FILE_NCLAP ) + '_ntrial_' + repr( FILE_NTRIAL ) + '.npz'
+    FILE_FULL_PATH = os.path.join( FILE_LOC, FILE_NAME )
+    AUDIO_GET_SIGNAL_GRAB_TRIG = 2048
+    AUDIO_GET_SIGNAL_CLOCK = 100e6
+    AUDIO_SAMPLE_RATE = AUDIO_GET_SIGNAL_CLOCK/AUDIO_GET_SIGNAL_GRAB_TRIG
+    pass
+
+    # Load file as data.
+    with numpy.load( FILE_FULL_PATH ) as npz_obj:
+        data = npz_obj['arr_0']
+        pass
+    #data = numpy.load( FILE_FULL_PATH )
+    
+    # Generate and display the plot.
+    pyplot.figure()
+    pyplot.plot( data )
+    pyplot.title( FILE_NAME )
+    pyplot.show()

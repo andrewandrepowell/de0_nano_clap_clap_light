@@ -1,0 +1,16 @@
+'''
+Created on Dec 2, 2016
+
+@author: andrewandrepowell2
+'''
+
+import numpy, sounddevice, itertools
+from matplotlib import pyplot
+
+if __name__ == '__main__':
+    
+    AUDIO_LOC = '../acquire_data'
+    AUDIO_GET_SIGNAL_GRAB_TRIG = 2048
+    AUDIO_GET_SIGNAL_CLOCK = 100e6
+    AUDIO_SAMPLE_RATE = AUDIO_GET_SIGNAL_CLOCK/AUDIO_GET_SIGNAL_GRAB_TRIG
+    pass

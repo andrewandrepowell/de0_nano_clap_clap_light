@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;determine_parameters_0&apos; to &apos;determine_params_0&apos;" description="Rename resource &apos;determine_parameters_0&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/determine_parameters_0" name="determine_params_0" stamp="1480691197514" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;determine_params_0&apos; to &apos;determine_params&apos;" description="Rename resource &apos;determine_params_0&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/determine_params_0" name="determine_params" stamp="1480691216625" updateReferences="true"/>
+</session>
