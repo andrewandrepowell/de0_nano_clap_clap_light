@@ -1,28 +1,38 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/.metadata/.plugins/org.eclipse.core.resources/.projects/acquire_data/com.python.pydev.analysis/v2_indexcache
+create_data|1482093554915835000|/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/acquire_data/create_data.py
 acquire_data|1476749593432771000|/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/acquire_data/acquire_data.py
 -- END DISKCACHE
 -- START DICTIONARY
-3
-3=socket_wrap.__init__
-1=acquire_data
-2=socket_wrap
+4
+1=create_data
+4=socket_wrap.__init__
+2=acquire_data
+3=socket_wrap
 -- END DICTIONARY
 -- START TREE 1
-8
-aud|4|AUDIO_SAMPLE_RATE!11@AUDIO_BUFFER_SIZE!11@AUDIO_GET_SIGNAL_GRAB_TRIG!11@AUDIO_GET_SIGNAL_CLOCK!11@
-d|1|d!11@
-dat|3|data!11@DATA_TRIALS!11@DATA_CLAPS!11@
-fna|1|fname!11@
-int|1|int2bytearray!10@
-num|1|NUMPY_DATA_DT!11@
-soc|1|socket_wrap!9@
-tcp|3|TCP_RCBUF_SIZE!11@TCP_PORT!11@TCP_IP_ADDR!11@
+16
+add|1|add_clap!10@
+aud|4|AUDIO_SAMPLE_RATE!19@AUDIO_BUFFER_SIZE!19@AUDIO_GET_SIGNAL_GRAB_TRIG!19@AUDIO_GET_SIGNAL_CLOCK!19@
+cla|2|CLAP_AMPLITUDE!11@CLAP_NUMBER_OF_SAMPLES!11@
+cre|2|create_signal!10@create_clap!10@
+d|1|d!19@
+dat|3|data!19@DATA_TRIALS!19@DATA_CLAPS!19@
+fna|2|fname!11@fname!19@
+int|1|int2bytearray!18@
+ncl|1|nclap!11@
+num|1|NUMPY_DATA_DT!19@
+sig|4|SIG_SIGMA!11@SIG_DATA_DT!11@SIG_NTRIAL!11@SIG_NUMBER_OF_SAMPLES!11@
+sin|0|
+soc|1|socket_wrap!17@
+tcp|3|TCP_RCBUF_SIZE!19@TCP_PORT!19@TCP_IP_ADDR!19@
+x|1|x!11@
+y|0|
 -- END TREE
 -- START TREE 2
 3
-__e|2|__enter__!2&10@__exit__!2&10@
-__i|1|__init__!2&10@
-s|1|s!3&11@
+__e|2|__enter__!3&18@__exit__!3&18@
+__i|1|__init__!3&18@
+s|1|s!4&19@
 -- END TREE

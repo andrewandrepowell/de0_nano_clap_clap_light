@@ -1,0 +1,22 @@
+'''
+Created on Dec 18, 2016
+
+@author: andrewandrepowell2
+'''
+
+import numpy as np
+from matplotlib import pyplot as pp
+
+if __name__ == '__main__':
+    
+    SIN_FREQUENCY = 16
+    SIN_NUMBER_OF_PERIODS = 1
+    SIN_SAMPLES_PER_PER = 32
+    SIN_SAMPLE_RATE = SIN_SAMPLES_PER_PER*SIN_FREQUENCY
+    
+    x = np.sin( 2*np.pi*SIN_FREQUENCY/SIN_SAMPLE_RATE*np.arange( SIN_NUMBER_OF_PERIODS*SIN_SAMPLES_PER_PER ) ) 
+    
+    pp.figure()
+    pp.plot( x )
+    pp.show()
+    pass

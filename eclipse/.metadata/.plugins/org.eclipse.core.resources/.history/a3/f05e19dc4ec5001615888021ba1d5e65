@@ -1,0 +1,36 @@
+'''
+Created on Dec 18, 2016
+
+@author: andrewandrepowell2
+'''
+
+import numpy as np
+from matplotlib import pyplot as pp
+
+def create_signal( amount, mu=0, sigma=1 ):
+    return np.random.normal( mu, sigma, amount )
+
+def create_clap( amplitude, samples_per_period ):
+    return amplitude*np.sin( 2*np.pi*np.arange( samples_per_period )/samples_per_period ) 
+
+def add_clap( x, loc, amplitude, samples_per_period ):
+    x[loc:loc+samples_per_period] = create_clap( amplitude, samples_per_period )
+    return x
+
+if __name__ == '__main__':
+    
+#     SIN_FREQUENCY = 16
+#     SIN_NUMBER_OF_PERIODS = 1
+#     SIN_SAMPLES_PER_PER = 32
+#     SIN_SAMPLE_RATE = SIN_SAMPLES_PER_PER*SIN_FREQUENCY
+#      
+#     x = np.sin( 2*np.pi*SIN_FREQUENCY/SIN_SAMPLE_RATE*np.arange( SIN_NUMBER_OF_PERIODS*SIN_SAMPLES_PER_PER ) ) 
+#      
+    SIG_NUMBER_OF_SAMPLES = 512
+    CLAP_NUMBER_OF_SAMPLES = 16
+
+    x = create_signal( SIG_NUMBER_OF_SAMPLES )
+    pp.figure()
+    pp.plot( x )
+    pp.show()
+    pass
