@@ -1,7 +1,7 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/.metadata/.plugins/org.eclipse.core.resources/.projects/acquire_data/com.python.pydev.analysis/v2_indexcache
-create_data|1482093554915835000|/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/acquire_data/create_data.py
+create_data|1482094024947338000|/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/acquire_data/create_data.py
 acquire_data|1476749593432771000|/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/acquire_data/acquire_data.py
 -- END DISKCACHE
 -- START DICTIONARY
@@ -12,7 +12,7 @@ acquire_data|1476749593432771000|/opt/Quartus Prime Lite Projects/de0_nano_clap_
 3=socket_wrap
 -- END DICTIONARY
 -- START TREE 1
-16
+14
 add|1|add_clap!10@
 aud|4|AUDIO_SAMPLE_RATE!19@AUDIO_BUFFER_SIZE!19@AUDIO_GET_SIGNAL_GRAB_TRIG!19@AUDIO_GET_SIGNAL_CLOCK!19@
 cla|2|CLAP_AMPLITUDE!11@CLAP_NUMBER_OF_SAMPLES!11@
@@ -24,11 +24,9 @@ int|1|int2bytearray!18@
 ncl|1|nclap!11@
 num|1|NUMPY_DATA_DT!19@
 sig|4|SIG_SIGMA!11@SIG_DATA_DT!11@SIG_NTRIAL!11@SIG_NUMBER_OF_SAMPLES!11@
-sin|0|
 soc|1|socket_wrap!17@
 tcp|3|TCP_RCBUF_SIZE!19@TCP_PORT!19@TCP_IP_ADDR!19@
 x|1|x!11@
-y|0|
 -- END TREE
 -- START TREE 2
 3

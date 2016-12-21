@@ -1,0 +1,35 @@
+'''
+Created on Dec 20, 2016
+
+@author: andrewandrepowell2
+'''
+
+import os, glpk
+import numpy as np, itertools as it
+from matplotlib import pyplot as pp
+
+if __name__ == '__main__':
+    
+    # Define the constants for the script.
+    FILE_LOC = '../acquire_data'
+    FILE_NCLAP = 3
+    FILE_NTRIAL = 1
+    FILE_NAME = 'nclap_' + repr( FILE_NCLAP ) + '_ntrial_' + repr( FILE_NTRIAL ) + '.npz'
+    FILE_FULL_PATH = os.path.join( FILE_LOC, FILE_NAME )
+    OPT_SAMPLES_DTYPE = numpy.dtype( numpy.float64 )
+    OPT_SAMPLES_PER_ENERGY_SAMPLE = 4
+    OPT_LAG = OPT_SAMPLES_PER_ENERGY_SAMPLE-1
+    
+    # Define some of the parameters for optimization.
+    delta_n = OPT_SAMPLES_PER_ENERGY_SAMPLE
+    delta_n_L = OPT_LAG
+    
+    # Load file as data.
+    with numpy.load( FILE_FULL_PATH ) as npz_obj:
+        x_n = npz_obj[ 'arr_0' ]
+    x_n = x_n.astype( OPT_SAMPLES_DTYPE, copy=False )
+    
+    S_N = len( x_n )
+    S_M = 
+    
+    

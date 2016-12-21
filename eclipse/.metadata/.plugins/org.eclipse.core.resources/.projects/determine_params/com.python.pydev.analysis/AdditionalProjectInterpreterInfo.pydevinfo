@@ -1,35 +1,42 @@
 -- VERSION_4
 -- START DISKCACHE_2
 /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/.metadata/.plugins/org.eclipse.core.resources/.projects/determine_params/com.python.pydev.analysis/v2_indexcache
+determine_params_0|1482295271518537000|/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/determine_params/determine_params_0.py
+determine_params_1|1482297034262349000|/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/eclipse/determine_params/determine_params_1.py
 -- END DISKCACHE
 -- START DICTIONARY
-0
+2
+1=determine_params_0
+2=determine_params_1
 -- END DICTIONARY
 -- START TREE 1
-23
-B|0|
-K|0|
-M|0|
-T|0|
-alp|0|
-aud|0|
-bet|0|
-cur|0|
-del|0|
-e_m|0|
-e_t|0|
-fil|0|
-lp|0|
-m_t|0|
-mat|0|
-max|0|
-obj|0|
-opt|0|
-s_k|0|
-s_m|0|
-sig|0|
-sol|0|
-x_n|0|
+26
+B|2|B!11@B!19@
+K|2|K!11@K!19@
+M|2|M!11@M!19@
+T|2|T!11@T!19@
+alp|1|alpha_t_b_k_m!11@
+aud|3|AUDIO_GET_SIGNAL_CLOCK!11@AUDIO_SAMPLE_RATE!11@AUDIO_GET_SIGNAL_GRAB_TRIG!11@
+bet|1|beta_t_b_k_m!11@
+cre|1|create_col!18@
+cur|1|curr_row!11@
+del|7|delta_m_t_k!11@delta_m_t!11@delta_m_k!11@delta_n_L!19@delta_m_k!19@delta_n!19@delta_n!11@
+e_m|2|e_m!11@e_m!19@
+e_t|1|e_t!11@
+fil|10|FILE_NTRIAL!11@FILE_NAME!11@FILE_NCLAP!19@FILE_LOC!11@FILE_NAME!19@FILE_FULL_PATH!19@FILE_LOC!19@FILE_FULL_PATH!11@FILE_NCLAP!11@FILE_NTRIAL!19@
+lp|2|lp!11@lp!19@
+m_t|1|m_t_b_k!11@
+mat|2|mat!19@mat!11@
+max|4|max_e_m!19@max_e_m!11@max_delta_m_k!11@max_delta_m_t_k!11@
+obj|2|obj!19@obj!11@
+opt|5|OPT_LAG!19@OPT_SAMPLES_DTYPE!11@OPT_SAMPLES_DTYPE!19@OPT_SAMPLES_PER_ENERGY_SAMPLE!19@OPT_SAMPLES_PER_ENERGY_SAMPLE!11@
+plo|1|plot_grid!18@
+s_k|2|S_K!11@S_K!19@
+s_m|2|S_M!19@S_M!11@
+s_n|1|S_N!19@
+sig|1|sigma_t_k_m!11@
+sol|1|solver_status!11@
+x_n|2|x_n!19@x_n!11@
 -- END TREE
 -- START TREE 2
 0
