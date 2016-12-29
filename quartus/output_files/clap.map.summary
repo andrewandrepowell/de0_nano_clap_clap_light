@@ -1,7 +1,7 @@
-Analysis & Elaboration Status : Successful - Thu Dec 29 02:09:02 2016
+Analysis & Elaboration Status : Successful - Thu Dec 29 12:39:51 2016
 Quartus Prime Version : 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 Revision Name : clap
-Top-level Entity Name : top2
+Top-level Entity Name : DetermineClap
 Family : Cyclone IV E
 Total logic elements : N/A until Partition Merge
     Total combinational functions : N/A until Partition Merge

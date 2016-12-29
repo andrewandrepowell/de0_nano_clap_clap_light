@@ -1,5 +1,5 @@
 Analysis & Elaboration report for clap
-Thu Dec 29 02:09:02 2016
+Thu Dec 29 12:39:51 2016
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -9,17 +9,10 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
   1. Legal Notice
   2. Analysis & Elaboration Summary
   3. Parallel Compilation
-  4. Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst
-  5. Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|spimaster:spimaster_inst
-  6. Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|driver:driver_inst
-  7. Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|fifo:fifo_inst
-  8. Parameter Settings for User Entity Instance: ComputeEnergy:ComputeEnergy_inst
-  9. Analysis & Elaboration Settings
- 10. Port Connectivity Checks: "ComputeEnergy:ComputeEnergy_inst"
- 11. Port Connectivity Checks: "GetSignal:GetSignal_inst|fifo:fifo_inst"
- 12. Port Connectivity Checks: "GetSignal:GetSignal_inst"
- 13. Analysis & Elaboration Messages
- 14. Analysis & Elaboration Suppressed Messages
+  4. Parameter Settings for User Entity Instance: Top-level Entity: |DetermineClap
+  5. Analysis & Elaboration Settings
+  6. Analysis & Elaboration Messages
+  7. Analysis & Elaboration Suppressed Messages
 
 
 
@@ -46,10 +39,10 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Elaboration Summary                                                   ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Elaboration Status      ; Successful - Thu Dec 29 02:09:02 2016       ;
+; Analysis & Elaboration Status      ; Successful - Thu Dec 29 12:39:51 2016       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; clap                                        ;
-; Top-level Entity Name              ; top2                                        ;
+; Top-level Entity Name              ; DetermineClap                               ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; N/A until Partition Merge                   ;
 ;     Total combinational functions  ; N/A until Partition Merge                   ;
@@ -79,62 +72,20 @@ agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst ;
-+------------------------+-------+--------------------------------------+
-; Parameter Name         ; Value ; Type                                 ;
-+------------------------+-------+--------------------------------------+
-; CLK_TRIG               ; 2     ; Signed Integer                       ;
-; GRAB_TRIG              ; 128   ; Signed Integer                       ;
-; RAM_ADDR_WIDTH         ; 2     ; Signed Integer                       ;
-; C_M00_AXIS_TDATA_WIDTH ; 16    ; Signed Integer                       ;
-+------------------------+-------+--------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|spimaster:spimaster_inst ;
-+----------------+-------+-----------------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                                  ;
-+----------------+-------+-----------------------------------------------------------------------+
-; CLK_TRIG       ; 2     ; Signed Integer                                                        ;
-; SAMPLE_WIDTH   ; 16    ; Signed Integer                                                        ;
-+----------------+-------+-----------------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|driver:driver_inst ;
-+----------------+-------+-----------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                            ;
-+----------------+-------+-----------------------------------------------------------------+
-; GRAB_TRIG      ; 128   ; Signed Integer                                                  ;
-; SAMPLE_WIDTH   ; 16    ; Signed Integer                                                  ;
-+----------------+-------+-----------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GetSignal:GetSignal_inst|fifo:fifo_inst ;
-+----------------+-------+-------------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                        ;
-+----------------+-------+-------------------------------------------------------------+
-; RAM_ADDR_WIDTH ; 2     ; Signed Integer                                              ;
-; FIFO_WIDTH     ; 16    ; Signed Integer                                              ;
-+----------------+-------+-------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
 +-------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: ComputeEnergy:ComputeEnergy_inst ;
-+----------------+-------+------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                 ;
-+----------------+-------+------------------------------------------------------+
-; SAMPLE_WIDTH   ; 16    ; Signed Integer                                       ;
-; ENERGY_WIDTH   ; 37    ; Signed Integer                                       ;
-; DURATION       ; 16    ; Signed Integer                                       ;
-; LAG            ; 15    ; Signed Integer                                       ;
-+----------------+-------+------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |DetermineClap ;
++-------------------------+-------+---------------------------------------------+
+; Parameter Name          ; Value ; Type                                        ;
++-------------------------+-------+---------------------------------------------+
+; ENERGY_WIDTH            ; 16    ; Signed Integer                              ;
+; ENERGY_HIGH_THRESHOLD   ; 100   ; Signed Integer                              ;
+; ENERGY_LOW_THRESHOLD    ; 50    ; Signed Integer                              ;
+; SAMPLE_HIGH_THRESHOLD   ; 4     ; Signed Integer                              ;
+; SAMPLE_MIDDLE_THRESHOLD ; 10    ; Signed Integer                              ;
+; SAMPLE_LOW_THRESHOLD    ; 200   ; Signed Integer                              ;
+; CLAPS_SAMPLE_THRESHOLD  ; 200   ; Signed Integer                              ;
+; CLAPS_OUT_WIDTH         ; 16    ; Signed Integer                              ;
++-------------------------+-------+---------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -144,7 +95,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                                      ; top2               ; clap               ;
+; Top-level entity name                                                      ; DetermineClap      ; clap               ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -224,43 +175,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------------------------------------------------------------+--------------------+--------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "ComputeEnergy:ComputeEnergy_inst"                                                           ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                             ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-; energy_data  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; energy_valid ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "GetSignal:GetSignal_inst|fifo:fifo_inst"                                                                                                                                                ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                                                                                                                            ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; reset     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; reset[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
-; in_ack    ; Output ; Info     ; Explicitly unconnected                                                                                                                                                             ;
-+-----------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "GetSignal:GetSignal_inst"                                                                     ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port           ; Type   ; Severity ; Details                                                                             ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-; m00_axis_tstrb ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +---------------------------------+
 ; Analysis & Elaboration Messages ;
 +---------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Elaboration
     Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Dec 29 02:08:50 2016
+    Info: Processing started: Thu Dec 29 12:39:39 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off clap -c clap --analysis_and_elaboration
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -284,33 +205,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file /projec
     Info (12023): Found entity 1: driver File: C:/projects/de0_nano_clap_clap_light/hdl/driver.v Line: 8
 Info (12021): Found 1 design units, including 1 entities, in source file /projects/de0_nano_clap_clap_light/hdl/top2.v
     Info (12023): Found entity 1: top2 File: C:/projects/de0_nano_clap_clap_light/hdl/top2.v Line: 1
-Info (12127): Elaborating entity "top2" for the top level hierarchy
-Warning (10034): Output port "toglite_state" at top2.v(7) has no driver File: C:/projects/de0_nano_clap_clap_light/hdl/top2.v Line: 7
-Info (12128): Elaborating entity "GetSignal" for hierarchy "GetSignal:GetSignal_inst" File: C:/projects/de0_nano_clap_clap_light/hdl/top2.v Line: 45
-Info (12128): Elaborating entity "spimaster" for hierarchy "GetSignal:GetSignal_inst|spimaster:spimaster_inst" File: C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v Line: 46
-Warning (10230): Verilog HDL assignment warning at spimaster.v(76): truncated value with size 32 to match size of target (2) File: C:/projects/de0_nano_clap_clap_light/hdl/spimaster.v Line: 76
-Warning (10230): Verilog HDL assignment warning at spimaster.v(95): truncated value with size 32 to match size of target (5) File: C:/projects/de0_nano_clap_clap_light/hdl/spimaster.v Line: 95
-Info (12128): Elaborating entity "driver" for hierarchy "GetSignal:GetSignal_inst|driver:driver_inst" File: C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v Line: 57
-Warning (10230): Verilog HDL assignment warning at driver.v(47): truncated value with size 32 to match size of target (8) File: C:/projects/de0_nano_clap_clap_light/hdl/driver.v Line: 47
-Info (12128): Elaborating entity "fifo" for hierarchy "GetSignal:GetSignal_inst|fifo:fifo_inst" File: C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v Line: 71
-Warning (10230): Verilog HDL assignment warning at fifo.v(42): truncated value with size 32 to match size of target (3) File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 42
-Warning (10230): Verilog HDL assignment warning at fifo.v(45): truncated value with size 32 to match size of target (1) File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 45
-Warning (10230): Verilog HDL assignment warning at fifo.v(46): truncated value with size 32 to match size of target (1) File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 46
-Warning (10230): Verilog HDL assignment warning at fifo.v(55): truncated value with size 32 to match size of target (3) File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 55
-Warning (10230): Verilog HDL assignment warning at fifo.v(64): truncated value with size 32 to match size of target (2) File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 64
-Warning (10230): Verilog HDL assignment warning at fifo.v(65): truncated value with size 32 to match size of target (3) File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 65
-Warning (10230): Verilog HDL assignment warning at fifo.v(69): truncated value with size 32 to match size of target (2) File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 69
-Warning (10230): Verilog HDL assignment warning at fifo.v(70): truncated value with size 32 to match size of target (3) File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 70
-Info (12128): Elaborating entity "ComputeEnergy" for hierarchy "ComputeEnergy:ComputeEnergy_inst" File: C:/projects/de0_nano_clap_clap_light/hdl/top2.v Line: 59
-Warning (10762): Verilog HDL Case Statement warning at ComputeEnergy.v(47): can't check case statement for completeness because the case expression has too many possible states File: C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 47
-Warning (10762): Verilog HDL Case Statement warning at ComputeEnergy.v(89): can't check case statement for completeness because the case expression has too many possible states File: C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 89
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12127): Elaborating entity "DetermineClap" for the top level hierarchy
+Warning (10762): Verilog HDL Case Statement warning at DetermineClap.v(88): can't check case statement for completeness because the case expression has too many possible states File: C:/projects/de0_nano_clap_clap_light/hdl/DetermineClap.v Line: 88
+Warning (10230): Verilog HDL assignment warning at DetermineClap.v(180): truncated value with size 32 to match size of target (16) File: C:/projects/de0_nano_clap_clap_light/hdl/DetermineClap.v Line: 180
+Warning (10030): Net "energy_ready" at DetermineClap.v(18) has no driver or initial value, using a default initial value '0' File: C:/projects/de0_nano_clap_clap_light/hdl/DetermineClap.v Line: 18
 Info (144001): Generated suppressed messages file C:/projects/de0_nano_clap_clap_light/quartus/output_files/clap.map.smsg
-Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 16 warnings
+Info: Quartus Prime Analysis & Elaboration was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 596 megabytes
-    Info: Processing ended: Thu Dec 29 02:09:02 2016
+    Info: Processing ended: Thu Dec 29 12:39:51 2016
     Info: Elapsed time: 00:00:12
-    Info: Total CPU time (on all processors): 00:00:30
+    Info: Total CPU time (on all processors): 00:00:28
 
 
 +--------------------------------------------+
