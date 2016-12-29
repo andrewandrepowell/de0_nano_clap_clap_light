@@ -12,10 +12,9 @@ module DetermineClap #
 		parameter integer CLAPS_OUT_WIDTH=16 
 	) (
 		input wire clock,
-		input wire nreset,
 		input wire [ENERGY_WIDTH-1:0] energy_data,
 		input wire energy_valid,
-		output reg energy_ready=0,
+		output wire energy_ready,
 		output reg [CLAPS_OUT_WIDTH-1:0] claps_out_data=0,
 		output reg claps_out_valid=0,
 		input wire claps_out_ready
@@ -41,11 +40,12 @@ module DetermineClap #
 	integer counters_sample_low=0;
 	reg [CLAPS_OUT_WIDTH-1:0] claps_total=0;
 	integer claps_counter=0;
-	reg claps_counter_nreset=0;
-	reg claps_total_nreset=0;
+	reg claps_counter_nreset=1;
+	reg claps_total_nreset=1;
 	reg claps_valid=0;
 
 	// Acquire energy sample.
+	assign energy_ready=1;
 	always @ (posedge clock)
 		if (energy_valid==1&&energy_ready==1)
 			begin
@@ -83,17 +83,21 @@ module DetermineClap #
 					
 	// Determine whether or not a clap occurred.
 	always @ (posedge clock)
-		if (counters_valid==1)
+		if (counters_valid==0)
+			begin
+				claps_valid <= 0;
+			end
+		else
 			begin
 				case (counters_state)
 				CS_INITIAL:
 					begin
 						if (counters_data>=ENERGY_HIGH_THRESHOLD)
 							begin
+								counters_nreset <= 1;
 								claps_counter_nreset <= 0;
 								counters_state <= CS_ENERGY_HIGH;
 							end
-						counters_nreset <= 0;
 					end
 				CS_ENERGY_HIGH:
 					begin
@@ -112,7 +116,7 @@ module DetermineClap #
 									end
 								else
 									begin
-										counters_nreset <= 1;
+										counters_nreset <= 0;
 										counters_state <= CS_INITIAL;
 									end
 							end
@@ -133,7 +137,7 @@ module DetermineClap #
 							end
 						else
 							begin
-								counters_nreset <= 1;
+								counters_nreset <= 0;
 								counters_state <= CS_INITIAL;
 							end
 					end
@@ -143,13 +147,13 @@ module DetermineClap #
 							begin
 								if (counters_data>ENERGY_LOW_THRESHOLD)
 									begin
-										counters_nreset <= 1;
+										counters_nreset <= 0;
 										counters_state <= CS_INITIAL;
 									end
 							end
 						else
 							begin
-								counters_nreset <= 1;
+								counters_nreset <= 0;
 								counters_state <= CS_INITIAL;
 								claps_valid <= 1;
 								claps_counter_nreset <= 1;
@@ -182,19 +186,19 @@ module DetermineClap #
 			
 	// Output total number of consecutive claps.
 	always @(posedge clock)
-		if (claps_total_nreset==1)
+		if (claps_total_nreset==0)
 			begin
-				claps_total_nreset <= 0;
+				claps_total_nreset <= 1;
 			end
 		else if (claps_counter>=CLAPS_SAMPLE_THRESHOLD)
 			begin
 				claps_out_data <= claps_total;
 				claps_out_valid <= 1;
 			end
-		else if (claps_out_ready==1)
+		else if (claps_out_valid==1&&claps_out_ready==1)
 			begin
+				claps_total_nreset <= 0;
 				claps_out_valid <= 0;
-				claps_total_nreset <= 1;
 			end
 	
 endmodule

@@ -17,10 +17,11 @@ module testbench;
 	wire spi_chipselect_sig;
 	reg spi_data_sig=0;
 	
-	localparam integer IN_SAMPLE_TOTAL=128;
+	localparam integer IN_SAMPLE_TOTAL=120;
 	integer in;
 	integer out;
 	reg [SAMPLE_WIDTH-1:0] in_samples [0:IN_SAMPLE_TOTAL-1];
+	reg [SAMPLE_WIDTH-1:0] in_noise [0:IN_SAMPLE_TOTAL-1];
     
 	task wait_clock_cycles( input integer amount );
 		automatic integer each_edge;
@@ -50,7 +51,7 @@ module testbench;
 	.spi_chipselect(spi_chipselect_sig),
 	.spi_data(spi_data_sig),	
 	.toglite_state(toglite_state_sig));
-	assign top2_inst.energy_ready_sig = 1;
+	assign top2_inst.claps_ready_sig = 1;
         
     // Drive clock
     always 
@@ -83,6 +84,23 @@ module testbench;
 			for ( each_word=0; each_word<IN_SAMPLE_TOTAL; each_word=each_word+1 )
 				begin
 					drive_spi(in_samples[each_word]);
+				end
+			// Loading noise.
+			$display("Loading input noise...");
+			in  = $fopen("../../../eclipse/generate_sims/nclap_0_ntrial_1.txt","r");
+			wait_clock_cycles(1);
+			each_word = 0;
+			while (!$feof(in)) 
+				begin
+					$fscanf(in,"%h\n",in_noise[each_word]);
+					each_word = each_word+1;
+				end
+			$fclose(in);
+			// Drive SPI interface.
+			wait_clock_cycles(1);
+			for ( each_word=0; each_word<IN_SAMPLE_TOTAL; each_word=each_word+1 )
+				begin
+					drive_spi(in_noise[each_word]);
 				end
 			$finish;
 		end

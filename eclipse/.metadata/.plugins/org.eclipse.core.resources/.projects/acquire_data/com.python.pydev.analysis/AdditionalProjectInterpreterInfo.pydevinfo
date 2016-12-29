@@ -1,7 +1,7 @@
 -- VERSION_4
 -- START DISKCACHE_2
 C:\projects\de0_nano_clap_clap_light\eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\acquire_data\com.python.pydev.analysis\v2_indexcache
-create_data|1482903157339977000|C:\projects\de0_nano_clap_clap_light\eclipse\acquire_data\create_data.py
+create_data|1482963691059463000|C:\projects\de0_nano_clap_clap_light\eclipse\acquire_data\create_data.py
 acquire_data|1482903157338974000|C:\projects\de0_nano_clap_clap_light\eclipse\acquire_data\acquire_data.py
 -- END DISKCACHE
 -- START DICTIONARY
@@ -23,7 +23,7 @@ fna|2|fname!11@fname!19@
 int|1|int2bytearray!18@
 ncl|1|nclap!11@
 num|1|NUMPY_DATA_DT!19@
-sig|4|SIG_SIGMA!11@SIG_DATA_DT!11@SIG_NTRIAL!11@SIG_NUMBER_OF_SAMPLES!11@
+sig|5|SIG_SIGMA!11@SIG_DATA_DT!11@SIG_NTRIAL!11@SIG_NUMBER_OF_SAMPLES!11@SIG_BIAS!11@
 soc|1|socket_wrap!17@
 tcp|3|TCP_RCBUF_SIZE!19@TCP_PORT!19@TCP_IP_ADDR!19@
 x|1|x!11@

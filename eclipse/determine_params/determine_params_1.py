@@ -65,6 +65,7 @@ if __name__ == '__main__':
     e_m = np.array( [ np.sum( np.square( 
         x_n[ m*(delta_n-delta_n_L):m*(delta_n-delta_n_L)+delta_n ] ) ) 
                      for m in range( S_M ) ] )
+    e_m = e_m[0:120]
     
     # Display plots.
     pp.figure()
@@ -95,8 +96,8 @@ if __name__ == '__main__':
         delta_m_k[k] = create_col( lp, (0,S_M/2-1), int )
         
     delta_m_t = {}
-    delta_m_t['H'] = create_col( lp, 20, int )
-    delta_m_t['L'] = create_col( lp, 15000, int )
+    delta_m_t['H'] = create_col( lp, 2, int )
+    delta_m_t['L'] = create_col( lp, 4, int )
         
     delta_m_t_k = {}
     for (t,k) in it.product(T,K):

@@ -5,6 +5,7 @@ if {[file exists rtl_work]} {
 vlib rtl_work
 vmap work rtl_work
 
+vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/DetermineClap.v}
 vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v}
 vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/spimaster.v}
 vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v}

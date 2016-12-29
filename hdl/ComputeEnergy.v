@@ -4,6 +4,7 @@ module ComputeEnergy #
 	(
 		parameter integer SAMPLE_WIDTH=16,
 		parameter integer ENERGY_WIDTH=32,
+		parameter integer SIGNAL_BIAS=-32,
 		parameter integer DURATION=16,
 		parameter integer LAG=15
 	)
@@ -35,6 +36,7 @@ module ComputeEnergy #
 	integer compute_state=CS_WAIT_FOR_VALID;
 	integer compute_cnt=0;
 	integer compute_ptr=0;
+	reg [SAMPLE_WIDTH*2-1:0] compute_square=0;
 	reg compute_valid=0;
 	reg [ENERGY_WIDTH-1:0] compute_total=0;
 
@@ -69,7 +71,7 @@ module ComputeEnergy #
 					end
 				else
 					begin
-						sample_fifo[0] <= sample_buff;
+						sample_fifo[0] <= sample_buff+SIGNAL_BIAS;
 						if (compute_cnt==(START_COMPUTE-1))
 							begin
 								compute_cnt <= 0;
@@ -100,9 +102,12 @@ module ComputeEnergy #
 		CS_COMPUTE_ENERGY:
 			begin
 				if (compute_ptr!=DURATION)
-					begin
-						compute_total = compute_total+sample_fifo[compute_ptr]*sample_fifo[compute_ptr];
-						compute_ptr = compute_ptr+1;
+					begin 
+						compute_square = 
+							$signed(sample_fifo[compute_ptr])*
+							$signed(sample_fifo[compute_ptr]);
+						compute_total = compute_total+compute_square;
+						compute_ptr <= compute_ptr+1;
 					end
 				else
 					begin
