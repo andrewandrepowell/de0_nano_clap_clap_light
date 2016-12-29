@@ -1,0 +1,166 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim
+vComputeEnergy
+Z1 !s110 1482995421
+!i10b 1
+!s100 IZ2>`5K;^8`I3IZZOFAGB2
+I^`F]gaj=Cm`SiN1E_aF4j3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1482995327
+8C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v
+FC:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v
+L0 3
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1482995421.000000
+!s107 C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/projects/de0_nano_clap_clap_light/hdl|C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl
+Z7 tCvgOpt 0
+n@compute@energy
+vdriver
+R1
+!i10b 1
+!s100 S@4I<Z@oF:TTEe01eQ0cf0
+I<kb@cX3BO6iz;WSMRlm?]1
+R2
+R0
+Z8 w1482903157
+8C:/projects/de0_nano_clap_clap_light/hdl/driver.v
+FC:/projects/de0_nano_clap_clap_light/hdl/driver.v
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/projects/de0_nano_clap_clap_light/hdl/driver.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/projects/de0_nano_clap_clap_light/hdl|C:/projects/de0_nano_clap_clap_light/hdl/driver.v|
+!i113 1
+R5
+R6
+R7
+vfifo
+R1
+!i10b 1
+!s100 MUHam:N]3:iO`^C`^keCV2
+IVDo=Y7U2VWzmz<7e^>GQ[3
+R2
+R0
+R8
+8C:/projects/de0_nano_clap_clap_light/hdl/fifo.v
+FC:/projects/de0_nano_clap_clap_light/hdl/fifo.v
+L0 7
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/projects/de0_nano_clap_clap_light/hdl/fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/projects/de0_nano_clap_clap_light/hdl|C:/projects/de0_nano_clap_clap_light/hdl/fifo.v|
+!i113 1
+R5
+R6
+R7
+vGetSignal
+R1
+!i10b 1
+!s100 [P=DG=Lb`n5;K1z2Ib]gK3
+IQ9Nd?TIZjT5keH5]JaTT72
+R2
+R0
+R8
+8C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v
+FC:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/projects/de0_nano_clap_clap_light/hdl|C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v|
+!i113 1
+R5
+R6
+R7
+n@get@signal
+vspimaster
+R1
+!i10b 1
+!s100 kCeNo_C@RSTcD[EUTKJW92
+I7Y;R6>QFbAZi77OEG5H>T2
+R2
+R0
+R8
+8C:/projects/de0_nano_clap_clap_light/hdl/spimaster.v
+FC:/projects/de0_nano_clap_clap_light/hdl/spimaster.v
+L0 8
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/projects/de0_nano_clap_clap_light/hdl/spimaster.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/projects/de0_nano_clap_clap_light/hdl|C:/projects/de0_nano_clap_clap_light/hdl/spimaster.v|
+!i113 1
+R5
+R6
+R7
+vtestbench
+!s110 1482995422
+!i10b 1
+!s100 L[=@MnbY5UL0JT0kVPgE00
+I_aRc3<>Q6PJ[jJ4RA7S2A2
+R2
+R0
+w1482992858
+8C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v
+FC:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/projects/de0_nano_clap_clap_light/quartus/../hdl|C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/quartus/../hdl
+R7
+vtop2
+R1
+!i10b 1
+!s100 oa;ICHhJigkDJf<DdXEFk1
+IZi1glNzIoCzNF<4_INI=L0
+R2
+R0
+w1482994047
+8C:/projects/de0_nano_clap_clap_light/hdl/top2.v
+FC:/projects/de0_nano_clap_clap_light/hdl/top2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/projects/de0_nano_clap_clap_light/hdl/top2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/projects/de0_nano_clap_clap_light/hdl|C:/projects/de0_nano_clap_clap_light/hdl/top2.v|
+!i113 1
+R5
+R6
+R7

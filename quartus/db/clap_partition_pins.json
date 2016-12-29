@@ -4,15 +4,143 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "spi_clock",
+					"name" : "sample_ready",
 					"strict" : false
 				},
 				{
-					"name" : "spi_chipselect",
+					"name" : "energy_data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "toglite_state",
+					"name" : "energy_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[15]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[16]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[17]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[18]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[19]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[20]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[21]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[22]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[23]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[24]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[25]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[26]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[27]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[28]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[29]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[30]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_data[31]",
+					"strict" : false
+				},
+				{
+					"name" : "energy_valid",
+					"strict" : false
+				},
+				{
+					"name" : "sample_valid",
 					"strict" : false
 				},
 				{
@@ -20,11 +148,71 @@
 					"strict" : false
 				},
 				{
-					"name" : "nreset",
+					"name" : "energy_ready",
 					"strict" : false
 				},
 				{
-					"name" : "spi_data",
+					"name" : "sample_data[0]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[1]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[2]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[3]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[4]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[5]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[6]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[7]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[8]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[9]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[10]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[11]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[12]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[13]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[14]",
+					"strict" : false
+				},
+				{
+					"name" : "sample_data[15]",
 					"strict" : false
 				}
 			]

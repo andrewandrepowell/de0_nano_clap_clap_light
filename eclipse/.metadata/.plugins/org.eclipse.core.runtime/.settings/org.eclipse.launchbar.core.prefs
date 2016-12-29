@@ -1,0 +1,7 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:acquire_data acquire_data.py,org.eclipse.launchbar.core.descriptorType.default\:determine_params determine_params_0.py,org.eclipse.launchbar.core.descriptorType.default\:determine_params determine_params_1.py,org.eclipse.launchbar.core.descriptorType.default\:acquire_data create_data.py,org.eclipse.launchbar.core.descriptorType.default\:generate_sims generate_sim_input.py
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:acquire_data\ acquire_data.py/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:acquire_data\ acquire_data.py/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:generate_sims\ generate_sim_input.py/activeLaunchMode=run

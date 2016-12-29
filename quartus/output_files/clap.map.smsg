@@ -1,2 +1,3 @@
-Warning (10268): Verilog HDL information at DetermineSuccessiveClapsAmount.v(73): always construct contains both blocking and non-blocking assignments File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/DetermineSuccessiveClapsAmount.v Line: 73
-Warning (10268): Verilog HDL information at fifo.v(49): always construct contains both blocking and non-blocking assignments File: /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 49
+Warning (10268): Verilog HDL information at DetermineSuccessiveClapsAmount.v(73): always construct contains both blocking and non-blocking assignments File: C:/projects/de0_nano_clap_clap_light/hdl/DetermineSuccessiveClapsAmount.v Line: 73
+Warning (10268): Verilog HDL information at ComputeEnergy.v(88): always construct contains both blocking and non-blocking assignments File: C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v Line: 88
+Warning (10268): Verilog HDL information at fifo.v(49): always construct contains both blocking and non-blocking assignments File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v Line: 49

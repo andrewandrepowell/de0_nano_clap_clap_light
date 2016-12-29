@@ -1,0 +1,23 @@
+-- VERSION_4
+-- START DISKCACHE_2
+C:\projects\de0_nano_clap_clap_light\eclipse\.metadata\.plugins\org.eclipse.core.resources\.projects\generate_sims\com.python.pydev.analysis\v2_indexcache
+generate_sim_input|1482993083716410000|C:\projects\de0_nano_clap_clap_light\eclipse\generate_sims\generate_sim_input.py
+-- END DISKCACHE
+-- START DICTIONARY
+1
+1=generate_sim_input
+-- END DICTIONARY
+-- START TREE 1
+5
+ene|1|ENERGY_NAME!11@
+fil|6|FILE_LOC!11@FILE_NAME!11@FILE_BNAME!11@FILE_FULL_PATH!11@FILE_NTRIAL!11@FILE_NCLAP!11@
+ope|0|
+sav|1|SAVE_NAME!11@
+x_n|1|x_n!11@
+-- END TREE
+-- START TREE 2
+3
+__e|0|
+__i|0|
+s|0|
+-- END TREE

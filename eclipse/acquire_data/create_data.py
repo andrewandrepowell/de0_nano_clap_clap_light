@@ -23,10 +23,11 @@ if __name__ == '__main__':
     # Define the parameters of the computer-generated signal.
     SIG_SIGMA=5
     SIG_NUMBER_OF_SAMPLES = 128
+    SIG_BIAS = 64
     SIG_DATA_DT = np.dtype( np.int16 )
     SIG_NTRIAL = 1
     CLAP_NUMBER_OF_SAMPLES = 8
-    CLAP_AMPLITUDE = 32
+    CLAP_AMPLITUDE = SIG_BIAS/2
 
     # Build the computer-generated signal.
     nclap = 0
@@ -36,7 +37,7 @@ if __name__ == '__main__':
     x,nclap = add_clap( x, 90, nclap, CLAP_AMPLITUDE*0.90, CLAP_NUMBER_OF_SAMPLES )
     
     # Convert computer-generated signal into the same type as the real data.
-    x = x.astype( SIG_DATA_DT, copy=False )
+    x = x.astype( SIG_DATA_DT, copy=False )+SIG_BIAS
     
     # Display the clap.
     pp.figure()
