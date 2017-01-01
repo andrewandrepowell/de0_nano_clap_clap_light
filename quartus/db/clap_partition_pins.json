@@ -16,14 +16,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "clock",
-					"strict" : false
-				},
-				{
-					"name" : "nreset",
-					"strict" : false
-				},
-				{
 					"name" : "spi_data",
 					"strict" : false
 				}

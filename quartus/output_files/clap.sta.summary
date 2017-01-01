@@ -2,124 +2,76 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Setup 'clock'
-Slack : -7.746
-TNS   : -1843.977
-
-Type  : Slow 1200mV 85C Model Setup 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : -0.584
-TNS   : -2.318
-
-Type  : Slow 1200mV 85C Model Hold 'clock'
-Slack : 0.346
+Type  : Slow 1200mV 85C Model Setup 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 1.076
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.360
+Type  : Slow 1200mV 85C Model Hold 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.357
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Recovery 'clock'
-Slack : -0.696
-TNS   : -52.775
-
-Type  : Slow 1200mV 85C Model Recovery 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : -0.011
-TNS   : -0.055
-
-Type  : Slow 1200mV 85C Model Removal 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.439
+Type  : Slow 1200mV 85C Model Recovery 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 8.027
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Removal 'clock'
-Slack : 0.535
+Type  : Slow 1200mV 85C Model Removal 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.997
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clock'
-Slack : -3.000
-TNS   : -615.000
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : -1.000
-TNS   : -21.000
-
-Type  : Slow 1200mV 0C Model Setup 'clock'
-Slack : -6.742
-TNS   : -1605.047
-
-Type  : Slow 1200mV 0C Model Setup 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : -0.407
-TNS   : -1.138
-
-Type  : Slow 1200mV 0C Model Hold 'clock'
-Slack : 0.306
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.746
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.320
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'inclock'
+Slack : 9.747
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Recovery 'clock'
-Slack : -0.511
-TNS   : -32.273
-
-Type  : Slow 1200mV 0C Model Recovery 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.090
+Type  : Slow 1200mV 0C Model Setup 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 2.061
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.404
+Type  : Slow 1200mV 0C Model Hold 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.311
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Removal 'clock'
-Slack : 0.479
+Type  : Slow 1200mV 0C Model Recovery 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 8.232
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clock'
-Slack : -3.000
-TNS   : -615.000
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : -1.000
-TNS   : -21.000
-
-Type  : Fast 1200mV 0C Model Setup 'clock'
-Slack : -4.013
-TNS   : -803.728
-
-Type  : Fast 1200mV 0C Model Setup 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.119
+Type  : Slow 1200mV 0C Model Removal 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.902
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'clock'
-Slack : 0.156
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.739
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.194
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'inclock'
+Slack : 9.709
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'clock'
-Slack : 0.012
+Type  : Fast 1200mV 0C Model Setup 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.862
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Recovery 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.457
+Type  : Fast 1200mV 0C Model Hold 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.186
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Removal 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : 0.174
+Type  : Fast 1200mV 0C Model Recovery 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 8.840
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Removal 'clock'
-Slack : 0.305
+Type  : Fast 1200mV 0C Model Removal 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 0.549
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clock'
-Slack : -3.000
-TNS   : -653.781
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altpll_0_inst|altpll_component|auto_generated|pll1|clk[0]'
+Slack : 4.781
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'GetSignal:GetSignal_inst|spimaster:spimaster_inst|spi_clock'
-Slack : -1.000
-TNS   : -21.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'inclock'
+Slack : 9.416
+TNS   : 0.000
 
 ------------------------------------------------------------

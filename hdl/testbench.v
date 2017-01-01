@@ -12,14 +12,12 @@ module testbench;
 	localparam integer CLOCK_PERIOD=10;
 	localparam integer SAMPLE_WIDTH=16;
 	reg clock_sig=0;
-	reg nreset_sig=0;
 	wire spi_clock_sig;
 	wire spi_chipselect_sig;
 	reg spi_data_sig=0;
 	
 	localparam integer IN_SAMPLE_TOTAL=128;
 	integer in;
-	integer out;
 	reg [SAMPLE_WIDTH-1:0] in_samples [0:IN_SAMPLE_TOTAL-1];
 	reg [SAMPLE_WIDTH-1:0] in_noise [0:IN_SAMPLE_TOTAL-1];
     
@@ -45,8 +43,7 @@ module testbench;
  
 	// DUT 
 	top2 top2_inst (
-	.clock(clock_sig) ,	
-	.nreset(nreset_sig),	
+	.inclock(clock_sig) ,		
 	.spi_clock(spi_clock_sig),	
 	.spi_chipselect(spi_chipselect_sig),
 	.spi_data(spi_data_sig),	
@@ -75,11 +72,8 @@ module testbench;
 					each_word = each_word+1;
 				end
 			$fclose(in);
-			// Reset SPI interface.
-			nreset_sig = 0;
 			// Drive SPI interface.
 			wait_clock_cycles(1);
-			nreset_sig = 1;
 			for ( each_word=0; each_word<IN_SAMPLE_TOTAL; each_word=each_word+1 )
 				begin
 					drive_spi(in_samples[each_word]);
@@ -96,7 +90,6 @@ module testbench;
 				end
 			// Drive SPI interface.
 			wait_clock_cycles(1);
-			nreset_sig = 1;
 			for ( each_word=0; each_word<IN_SAMPLE_TOTAL; each_word=each_word+1 )
 				begin
 					drive_spi(in_samples[each_word]);

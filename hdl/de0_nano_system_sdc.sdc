@@ -37,7 +37,7 @@
 #***************************************************************************
 # Create Clock
 #***************************************************************************
-create_clock -period 50MHz  [get_ports CLOCK_50]
+create_clock -period 50MHz  [get_ports inclock]
 create_clock -period 10MHz -name {altera_reserved_tck} {altera_reserved_tck}
 
 #***************************************************************************

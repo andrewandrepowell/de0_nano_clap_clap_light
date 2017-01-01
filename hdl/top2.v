@@ -1,6 +1,5 @@
 module top2(
-	input wire clock,
-	input wire nreset, // This will later get removed.
+	input wire inclock,
 	output wire spi_clock,
 	output wire spi_chipselect,
 	input wire spi_data,
@@ -32,6 +31,7 @@ module top2(
 	localparam integer TOGLITE_ON_VAL=3;
 	localparam integer TOGLITE_OFF_VAL=1;
 	
+	wire clock;
 	wire [(SAMPLE_WIDTH/8)-1 : 0] sample_tstrb_sig;
 	wire [SAMPLE_WIDTH-1:0] sample_data_sig;
 	wire sample_ready_sig, sample_valid_sig;
@@ -40,21 +40,26 @@ module top2(
 	wire [CLAPS_WIDTH-1:0] claps_data_sig;
 	wire claps_valid_sig,claps_ready_sig;
 	
+	altpll_0 altpll_0_inst (
+		.inclk0(inclock),
+		.c0(clock),
+		.locked());
+	
 	GetSignal #(
-		.CLK_TRIG( CLK_TRIG ),
-		.GRAB_TRIG( GRAB_TRIG ),
-		.RAM_ADDR_WIDTH( RAM_ADDR_WIDTH ),
-		.C_M00_AXIS_TDATA_WIDTH( SAMPLE_WIDTH )
+		.CLK_TRIG(CLK_TRIG),
+		.GRAB_TRIG(GRAB_TRIG),
+		.RAM_ADDR_WIDTH(RAM_ADDR_WIDTH),
+		.C_M00_AXIS_TDATA_WIDTH(SAMPLE_WIDTH)
 	) GetSignal_inst (
-		.m00_axis_aclk( clock ),
-		.m00_axis_aresetn( nreset ),
-		.m00_axis_tvalid( sample_valid_sig ),
-		.m00_axis_tdata( sample_data_sig ),
-		.m00_axis_tstrb( sample_tstrb_sig ),
-		.m00_axis_tready( sample_ready_sig ),
-		.spi_clock( spi_clock ),
-		.spi_chipselect( spi_chipselect ),
-		.spi_data( spi_data ) );
+		.m00_axis_aclk(clock),
+		.m00_axis_aresetn(1'b1),
+		.m00_axis_tvalid(sample_valid_sig),
+		.m00_axis_tdata(sample_data_sig),
+		.m00_axis_tstrb(sample_tstrb_sig),
+		.m00_axis_tready(sample_ready_sig),
+		.spi_clock(spi_clock),
+		.spi_chipselect(spi_chipselect),
+		.spi_data(spi_data));
 
 	ComputeEnergy #(
 		.SAMPLE_WIDTH(SAMPLE_WIDTH),
