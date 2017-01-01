@@ -28,14 +28,16 @@ module top2(
 	localparam integer SAMPLE_MIDDLE_THRESHOLD = 8;
 	localparam integer SAMPLE_LOW_THRESHOLD = 8;
 	localparam integer CLAPS_SAMPLE_THRESHOLD = 40;
-	localparam integer CLAPS_OUT_WIDTH = 16;
+	localparam integer CLAPS_WIDTH = 16;
+	localparam integer TOGLITE_ON_VAL=3;
+	localparam integer TOGLITE_OFF_VAL=1;
 	
 	wire [(SAMPLE_WIDTH/8)-1 : 0] sample_tstrb_sig;
 	wire [SAMPLE_WIDTH-1:0] sample_data_sig;
 	wire sample_ready_sig, sample_valid_sig;
 	wire [ENERGY_WIDTH-1:0] energy_data_sig;
 	wire energy_valid_sig, energy_ready_sig;
-	wire [CLAPS_OUT_WIDTH-1:0] claps_data_sig;
+	wire [CLAPS_WIDTH-1:0] claps_data_sig;
 	wire claps_valid_sig,claps_ready_sig;
 	
 	GetSignal #(
@@ -77,7 +79,7 @@ module top2(
 		.SAMPLE_MIDDLE_THRESHOLD(SAMPLE_MIDDLE_THRESHOLD),
 		.SAMPLE_LOW_THRESHOLD(SAMPLE_LOW_THRESHOLD),
 		.CLAPS_SAMPLE_THRESHOLD(CLAPS_SAMPLE_THRESHOLD),
-		.CLAPS_OUT_WIDTH(CLAPS_OUT_WIDTH)
+		.CLAPS_OUT_WIDTH(CLAPS_WIDTH)
 	) DetermineClap_inst (
 		.clock(clock) ,	// input  clock_sig
 		.energy_data(energy_data_sig) ,	// input [ENERGY_WIDTH-1:0] energy_data_sig
@@ -87,6 +89,15 @@ module top2(
 		.claps_out_valid(claps_valid_sig) ,	// output  claps_out_valid_sig
 		.claps_out_ready(claps_ready_sig));
 	
-
+	ToggleLight #(
+		.CLAPS_WIDTH(CLAPS_WIDTH),
+		.TOGLITE_ON_VAL(TOGLITE_ON_VAL),
+		.TOGLITE_OFF_VAL(TOGLITE_OFF_VAL)
+	) ToggleLight_inst (
+		.clock(clock) ,	// input  clock_sig
+		.claps_data(claps_data_sig) ,	// input [CLAPS_WIDTH-1:0] claps_data_sig
+		.claps_valid(claps_valid_sig),	// input  claps_valid_sig
+		.claps_ready(claps_ready_sig),	// output  claps_ready_sig
+		.toglite_state(toglite_state));
 
 endmodule

@@ -1,5 +1,5 @@
 Flow report for clap
-Thu Dec 29 17:20:19 2016
+Sat Dec 31 10:50:17 2016
 Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
@@ -41,22 +41,22 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Dec 29 17:20:19 2016       ;
+; Flow Status                        ; Successful - Sat Dec 31 10:50:17 2016       ;
 ; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
 ; Revision Name                      ; clap                                        ;
 ; Top-level Entity Name              ; top2                                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 810 / 22,320 ( 4 % )                        ;
+;     Total combinational functions  ; 601 / 22,320 ( 3 % )                        ;
+;     Dedicated logic registers      ; 633 / 22,320 ( 3 % )                        ;
+; Total registers                    ; 633                                         ;
+; Total pins                         ; 6 / 154 ( 4 % )                             ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
+; Embedded Multiplier 9-bit elements ; 2 / 132 ( 2 % )                             ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -65,7 +65,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/29/2016 17:20:07 ;
+; Start date & time ; 12/31/2016 10:49:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; clap                ;
 +-------------------+---------------------+
@@ -76,7 +76,7 @@ agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+---------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id          ;
 +--------------------------------------+----------------------------------------+---------------+-------------+---------------------+
-; COMPILER_SIGNATURE_ID                ; 180331615769137.148305000709880        ; --            ; --          ; --                  ;
+; COMPILER_SIGNATURE_ID                ; 180331615769137.148319936901240        ; --            ; --          ; --                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; GetSignal_testbench ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; testbench           ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; testbench                              ; --            ; --          ; eda_simulation      ;
@@ -103,29 +103,41 @@ agreement for further details.
 +--------------------------------------+----------------------------------------+---------------+-------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                          ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Elaboration ; 00:00:13     ; 1.0                     ; 598 MB              ; 00:00:29                           ;
-; Total                  ; 00:00:13     ; --                      ; --                  ; 00:00:29                           ;
-+------------------------+--------------+-------------------------+---------------------+------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 628 MB              ; 00:00:31                           ;
+; Fitter                    ; 00:00:16     ; 1.0                     ; 1158 MB             ; 00:00:12                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 562 MB              ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 650 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 537 MB              ; 00:00:02                           ;
+; Total                     ; 00:00:41     ; --                      ; --                  ; 00:00:49                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                      ;
-+------------------------+------------------+------------+------------+----------------+
-; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+------------------------+------------------+------------+------------+----------------+
-; Analysis & Elaboration ; DESKTOP-BHSDU7P  ; Windows 10 ; 10.0       ; x86_64         ;
-+------------------------+------------------+------------+------------+----------------+
++-----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                         ;
++---------------------------+------------------+------------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++---------------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis      ; DESKTOP-BHSDU7P  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter                    ; DESKTOP-BHSDU7P  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler                 ; DESKTOP-BHSDU7P  ; Windows 10 ; 10.0       ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-BHSDU7P  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-BHSDU7P  ; Windows 10 ; 10.0       ; x86_64         ;
++---------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off clap -c clap --analysis_and_elaboration
+quartus_map --read_settings_files=on --write_settings_files=off clap -c clap
+quartus_fit --read_settings_files=off --write_settings_files=off clap -c clap
+quartus_asm --read_settings_files=off --write_settings_files=off clap -c clap
+quartus_sta clap -c clap
+quartus_eda --read_settings_files=off --write_settings_files=off clap -c clap
 
 
 

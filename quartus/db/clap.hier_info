@@ -1,10 +1,10 @@
 |top2
-clock => clock.IN3
+clock => clock.IN4
 nreset => nreset.IN1
 spi_clock <= GetSignal:GetSignal_inst.spi_clock
 spi_chipselect <= GetSignal:GetSignal_inst.spi_chipselect
 spi_data => spi_data.IN1
-toglite_state <= <GND>
+toglite_state <= ToggleLight:ToggleLight_inst.toglite_state
 
 
 |top2|GetSignal:GetSignal_inst
@@ -946,5 +946,45 @@ claps_out_data[14] <= claps_out_data[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 claps_out_data[15] <= claps_out_data[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 claps_out_valid <= claps_out_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
 claps_out_ready => always5.IN1
+
+
+|top2|ToggleLight:ToggleLight_inst
+clock => toglite_state~reg0.CLK
+clock => claps_ready~reg0.CLK
+clock => claps_buff[0].CLK
+clock => claps_buff[1].CLK
+clock => claps_buff[2].CLK
+clock => claps_buff[3].CLK
+clock => claps_buff[4].CLK
+clock => claps_buff[5].CLK
+clock => claps_buff[6].CLK
+clock => claps_buff[7].CLK
+clock => claps_buff[8].CLK
+clock => claps_buff[9].CLK
+clock => claps_buff[10].CLK
+clock => claps_buff[11].CLK
+clock => claps_buff[12].CLK
+clock => claps_buff[13].CLK
+clock => claps_buff[14].CLK
+clock => claps_buff[15].CLK
+claps_data[0] => claps_buff[0].DATAIN
+claps_data[1] => claps_buff[1].DATAIN
+claps_data[2] => claps_buff[2].DATAIN
+claps_data[3] => claps_buff[3].DATAIN
+claps_data[4] => claps_buff[4].DATAIN
+claps_data[5] => claps_buff[5].DATAIN
+claps_data[6] => claps_buff[6].DATAIN
+claps_data[7] => claps_buff[7].DATAIN
+claps_data[8] => claps_buff[8].DATAIN
+claps_data[9] => claps_buff[9].DATAIN
+claps_data[10] => claps_buff[10].DATAIN
+claps_data[11] => claps_buff[11].DATAIN
+claps_data[12] => claps_buff[12].DATAIN
+claps_data[13] => claps_buff[13].DATAIN
+claps_data[14] => claps_buff[14].DATAIN
+claps_data[15] => claps_buff[15].DATAIN
+claps_valid => always0.IN1
+claps_ready <= claps_ready~reg0.DB_MAX_OUTPUT_PORT_TYPE
+toglite_state <= toglite_state~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 

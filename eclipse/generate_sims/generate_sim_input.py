@@ -17,7 +17,7 @@ if __name__ == '__main__':
     
     # Define the constants for the script.
     FILE_LOC = '../acquire_data'
-    FILE_NCLAP = 3
+    FILE_NCLAP = 1
     FILE_NTRIAL = 1
     FILE_BNAME = 'nclap_' + repr( FILE_NCLAP ) + '_ntrial_' + repr( FILE_NTRIAL )
     FILE_NAME = FILE_BNAME + '.npz'
@@ -31,7 +31,7 @@ if __name__ == '__main__':
     # Load file as data.
     with np.load( FILE_FULL_PATH ) as npz_obj:
         x_n = npz_obj[ 'arr_0' ]
-        
+    
     # Store signal as a list of hexidecimal values.
     with open( SAVE_NAME, 'w' ) as nf_obj:
         for x_n_ in x_n:

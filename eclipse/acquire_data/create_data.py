@@ -32,7 +32,7 @@ if __name__ == '__main__':
     # Build the computer-generated signal.
     nclap = 0
     x = create_signal( SIG_NUMBER_OF_SAMPLES, sigma=SIG_SIGMA )
-#     x,nclap = add_clap( x, 16, nclap, CLAP_AMPLITUDE*0.95, CLAP_NUMBER_OF_SAMPLES )
+    x,nclap = add_clap( x, 50, nclap, CLAP_AMPLITUDE*0.85, CLAP_NUMBER_OF_SAMPLES )
 #     x,nclap = add_clap( x, 67, nclap, CLAP_AMPLITUDE*0.75, CLAP_NUMBER_OF_SAMPLES )
 #     x,nclap = add_clap( x, 90, nclap, CLAP_AMPLITUDE*0.90, CLAP_NUMBER_OF_SAMPLES )
     

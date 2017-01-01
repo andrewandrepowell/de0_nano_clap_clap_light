@@ -10,91 +10,101 @@
 # Copying C:/intelFPGA_lite/16.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
+# vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/ToggleLight.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 14:03:33 on Dec 30,2016
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/hdl" C:/projects/de0_nano_clap_clap_light/hdl/ToggleLight.v 
+# -- Compiling module ToggleLight
+# 
+# Top level modules:
+# 	ToggleLight
+# End time: 14:03:33 on Dec 30,2016, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/DetermineClap.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:20:25 on Dec 29,2016
+# Start time: 14:03:33 on Dec 30,2016
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/hdl" C:/projects/de0_nano_clap_clap_light/hdl/DetermineClap.v 
 # -- Compiling module DetermineClap
 # 
 # Top level modules:
 # 	DetermineClap
-# End time: 17:20:25 on Dec 29,2016, Elapsed time: 0:00:00
+# End time: 14:03:33 on Dec 30,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:20:25 on Dec 29,2016
+# Start time: 14:03:33 on Dec 30,2016
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/hdl" C:/projects/de0_nano_clap_clap_light/hdl/ComputeEnergy.v 
 # -- Compiling module ComputeEnergy
 # 
 # Top level modules:
 # 	ComputeEnergy
-# End time: 17:20:25 on Dec 29,2016, Elapsed time: 0:00:00
+# End time: 14:03:33 on Dec 30,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/spimaster.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:20:25 on Dec 29,2016
+# Start time: 14:03:33 on Dec 30,2016
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/hdl" C:/projects/de0_nano_clap_clap_light/hdl/spimaster.v 
 # -- Compiling module spimaster
 # 
 # Top level modules:
 # 	spimaster
-# End time: 17:20:25 on Dec 29,2016, Elapsed time: 0:00:00
+# End time: 14:03:33 on Dec 30,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:20:25 on Dec 29,2016
+# Start time: 14:03:33 on Dec 30,2016
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/hdl" C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v 
 # -- Compiling module GetSignal
 # 
 # Top level modules:
 # 	GetSignal
-# End time: 17:20:25 on Dec 29,2016, Elapsed time: 0:00:00
+# End time: 14:03:33 on Dec 30,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/fifo.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:20:25 on Dec 29,2016
+# Start time: 14:03:33 on Dec 30,2016
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/hdl" C:/projects/de0_nano_clap_clap_light/hdl/fifo.v 
 # -- Compiling module fifo
 # 
 # Top level modules:
 # 	fifo
-# End time: 17:20:25 on Dec 29,2016, Elapsed time: 0:00:00
+# End time: 14:03:33 on Dec 30,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/driver.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:20:25 on Dec 29,2016
+# Start time: 14:03:33 on Dec 30,2016
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/hdl" C:/projects/de0_nano_clap_clap_light/hdl/driver.v 
 # -- Compiling module driver
 # 
 # Top level modules:
 # 	driver
-# End time: 17:20:26 on Dec 29,2016, Elapsed time: 0:00:01
+# End time: 14:03:33 on Dec 30,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/top2.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:20:26 on Dec 29,2016
+# Start time: 14:03:34 on Dec 30,2016
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/hdl" C:/projects/de0_nano_clap_clap_light/hdl/top2.v 
 # -- Compiling module top2
 # 
 # Top level modules:
 # 	top2
-# End time: 17:20:26 on Dec 29,2016, Elapsed time: 0:00:00
+# End time: 14:03:34 on Dec 30,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/quartus/../hdl {C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:20:26 on Dec 29,2016
+# Start time: 14:03:34 on Dec 30,2016
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/projects/de0_nano_clap_clap_light/quartus/../hdl" C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 17:20:26 on Dec 29,2016, Elapsed time: 0:00:00
+# End time: 14:03:34 on Dec 30,2016, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
-# Start time: 17:20:26 on Dec 29,2016
+# Start time: 14:03:34 on Dec 30,2016
 # Loading work.testbench
 # Loading work.top2
 # Loading work.GetSignal
@@ -103,9 +113,12 @@
 # Loading work.fifo
 # Loading work.ComputeEnergy
 # Loading work.DetermineClap
-# ** Warning: (vsim-PLI-3691) C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(75): Expected a system task, not a system function '$fscanf'.
+# Loading work.ToggleLight
+# ** Warning: (vsim-PLI-3691) C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(74): Expected a system task, not a system function '$fscanf'.
 #    Time: 0 ps  Iteration: 0  Region: /testbench/process_load_samples File: C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v
-# ** Warning: (vsim-PLI-3691) C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(95): Expected a system task, not a system function '$fscanf'.
+# ** Warning: (vsim-PLI-3691) C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(94): Expected a system task, not a system function '$fscanf'.
+#    Time: 0 ps  Iteration: 0  Region: /testbench/process_load_samples File: C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v
+# ** Warning: (vsim-PLI-3691) C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(112): Expected a system task, not a system function '$fscanf'.
 #    Time: 0 ps  Iteration: 0  Region: /testbench/process_load_samples File: C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v
 # ** Warning: (vsim-3015) C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v(62): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v(15).
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/top2_inst/GetSignal_inst/fifo_inst File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v
@@ -113,45 +126,20 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: andrewandre  Hostname: DESKTOP-BHSDU7P  ProcessID: 6528
-#           Attempting to use alternate WLF file "./wlftnxb4kf".
+#           Attempting to use alternate WLF file "./wlft3c3h0n".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftnxb4kf
+#           Using alternate file: ./wlft3c3h0n
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Loading input data...
-# Loading input noise...
-# ** Note: $finish    : C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(105)
-#    Time: 308130 ns  Iteration: 2  Instance: /testbench
-# 1
-# Break in NamedBeginStat process_load_samples at C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v line 105
-add wave -position end  sim:/testbench/top2_inst/sample_data_sig
-add wave -position end  sim:/testbench/top2_inst/sample_ready_sig
-add wave -position end  sim:/testbench/top2_inst/sample_valid_sig
-add wave -position end  sim:/testbench/top2_inst/energy_data_sig
-add wave -position end  sim:/testbench/top2_inst/energy_valid_sig
-add wave -position end  sim:/testbench/top2_inst/energy_ready_sig
-add wave -position end  sim:/testbench/top2_inst/claps_data_sig
-add wave -position end  sim:/testbench/top2_inst/claps_valid_sig
-add wave -position end  sim:/testbench/top2_inst/claps_ready_sig
-restart -f
-# ** Warning: (vsim-PLI-3691) C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(75): Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Region: /testbench/process_load_samples File: C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v
-# ** Warning: (vsim-PLI-3691) C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(95): Expected a system task, not a system function '$fscanf'.
-#    Time: 0 ps  Iteration: 0  Region: /testbench/process_load_samples File: C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v
-# ** Warning: (vsim-3015) C:/projects/de0_nano_clap_clap_light/hdl/GetSignal.v(62): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v(15).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/top2_inst/GetSignal_inst/fifo_inst File: C:/projects/de0_nano_clap_clap_light/hdl/fifo.v
-run -all
-# GetModuleFileName: The specified module could not be found.
-# 
-# 
 # Loading input data...
 # Loading input noise...
-# ** Note: $finish    : C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(105)
-#    Time: 308130 ns  Iteration: 2  Instance: /testbench
+# ** Note: $finish    : C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v(122)
+#    Time: 492450 ns  Iteration: 2  Instance: /testbench
 # 1
-# Break in NamedBeginStat process_load_samples at C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v line 105
-# End time: 17:22:55 on Dec 29,2016, Elapsed time: 0:02:29
-# Errors: 0, Warnings: 8
+# Break in NamedBeginStat process_load_samples at C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v line 122
+# End time: 17:51:08 on Dec 30,2016, Elapsed time: 3:47:34
+# Errors: 0, Warnings: 6

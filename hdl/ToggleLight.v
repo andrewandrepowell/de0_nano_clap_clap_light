@@ -2,52 +2,39 @@
 
 module ToggleLight # 
 	(
-		parameter integer SUC_CLAPS_WIDTH=16,
-		parameter integer TOGLITE_ON_VAL= 1,
-		parameter integer TOGLITE_OFF_VAL=2
+		parameter integer CLAPS_WIDTH=16,
+		parameter integer TOGLITE_ON_VAL= 2,
+		parameter integer TOGLITE_OFF_VAL=3
 	)
 	(
 		input wire clock,
-		input wire nreset,
-		input wire [SUC_CLAPS_WIDTH-1:0] suc_claps_data,
-		input wire suc_claps_valid,
-		output wire suc_claps_ready,
+		input wire [CLAPS_WIDTH-1:0] claps_data,
+		input wire claps_valid,
+		output reg claps_ready=0,
 		output reg toglite_state=0
 	);
-
-	reg [SUC_CLAPS_WIDTH-1:0] toglite_suc_claps=0;
-	reg toglite_valid=0;
 	
-	assign suc_claps_ready=1;
+	reg [CLAPS_WIDTH-1:0] claps_buff=0;
 
-	always @( posedge clock )
-		if ( nreset==0 )
+	always @(posedge clock)
+		if (claps_valid==1&&claps_ready==1)
 			begin
-				toglite_valid <= 0;
-			end
-		else if ( suc_claps_valid==1 && suc_claps_ready==1 )
-			begin
-				toglite_suc_claps <= suc_claps_data;
-				toglite_valid <= 1;
+				claps_buff <= claps_data;
+				claps_ready <= 0;
 			end
 		else
 			begin
-				toglite_valid <= 0;
+				claps_ready <= 1;
 			end
 			
-	always @( posedge clock )
-		if ( nreset==0 )
+	always @(posedge clock)
+		if (claps_buff==TOGLITE_ON_VAL)
+			begin
+				toglite_state <= 1;
+			end 
+		else if (claps_buff==TOGLITE_OFF_VAL)
 			begin
 				toglite_state <= 0;
 			end
-		else if ( toglite_valid==1 )
-			if ( toglite_suc_claps==TOGLITE_ON_VAL )
-				begin
-					toglite_state <= 1;
-				end
-			else if ( toglite_suc_claps==TOGLITE_OFF_VAL )
-				begin
-					toglite_state <= 0;
-				end
 	
 endmodule

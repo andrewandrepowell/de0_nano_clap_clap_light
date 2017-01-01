@@ -1,6 +1,6 @@
 EDA Netlist Writer report for clap
-Sun Oct 16 11:58:28 2016
-Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+Sat Dec 31 10:50:17 2016
+Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 
 
 ---------------------
@@ -17,18 +17,18 @@ Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
-Your use of Altera Corporation's design tools, logic functions 
+Copyright (C) 2016  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
-to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera MegaCore Function License Agreement, or other 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
-devices manufactured by Altera and sold by Altera or its 
+devices manufactured by Intel and sold by Intel or its 
 authorized distributors.  Please refer to the applicable 
 agreement for further details.
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Sun Oct 16 11:58:28 2016 ;
+; EDA Netlist Writer Status ; Successful - Sat Dec 31 10:50:17 2016 ;
 ; Revision Name             ; clap                                  ;
-; Top-level Entity Name     ; top                                   ;
+; Top-level Entity Name     ; top2                                  ;
 ; Family                    ; Cyclone IV E                          ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -67,20 +67,20 @@ agreement for further details.
 +---------------------------------------------------------------------------------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                          ;
-+---------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                     ;
-+---------------------------------------------------------------------------------------------------------------------+
-; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_6_1200mv_85c_slow.vo     ;
-; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_6_1200mv_0c_slow.vo      ;
-; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_min_1200mv_0c_fast.vo    ;
-; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap.vo                       ;
-; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_6_1200mv_85c_v_slow.sdo  ;
-; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_6_1200mv_0c_v_slow.sdo   ;
-; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_min_1200mv_0c_v_fast.sdo ;
-; /opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_v.sdo                    ;
-+---------------------------------------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                     ;
++------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                ;
++------------------------------------------------------------------------------------------------+
+; C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_6_1200mv_85c_slow.vo     ;
+; C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_6_1200mv_0c_slow.vo      ;
+; C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_min_1200mv_0c_fast.vo    ;
+; C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap.vo                       ;
+; C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_6_1200mv_85c_v_slow.sdo  ;
+; C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_6_1200mv_0c_v_slow.sdo   ;
+; C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_min_1200mv_0c_v_fast.sdo ;
+; C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/clap_v.sdo                    ;
++------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
@@ -88,21 +88,22 @@ agreement for further details.
 +-----------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
-    Info: Processing started: Sun Oct 16 11:58:27 2016
+    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+    Info: Processing started: Sat Dec 31 10:50:15 2016
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off clap -c clap
-Info (204019): Generated file clap_6_1200mv_85c_slow.vo in folder "/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file clap_6_1200mv_0c_slow.vo in folder "/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file clap_min_1200mv_0c_fast.vo in folder "/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file clap.vo in folder "/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file clap_6_1200mv_85c_v_slow.sdo in folder "/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file clap_6_1200mv_0c_v_slow.sdo in folder "/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file clap_min_1200mv_0c_v_fast.sdo in folder "/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file clap_v.sdo in folder "/opt/Quartus Prime Lite Projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 1315 megabytes
-    Info: Processing ended: Sun Oct 16 11:58:28 2016
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file clap_6_1200mv_85c_slow.vo in folder "C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file clap_6_1200mv_0c_slow.vo in folder "C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file clap_min_1200mv_0c_fast.vo in folder "C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file clap.vo in folder "C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file clap_6_1200mv_85c_v_slow.sdo in folder "C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file clap_6_1200mv_0c_v_slow.sdo in folder "C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file clap_min_1200mv_0c_v_fast.sdo in folder "C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file clap_v.sdo in folder "C:/projects/de0_nano_clap_clap_light/quartus/simulation/modelsim/" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 537 megabytes
+    Info: Processing ended: Sat Dec 31 10:50:17 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
 
 
