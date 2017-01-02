@@ -13,6 +13,8 @@ vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {
 vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/fifo.v}
 vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/driver.v}
 vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/top2.v}
+vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/hdl {C:/projects/de0_nano_clap_clap_light/hdl/altpll_0.v}
+vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/quartus/db {C:/projects/de0_nano_clap_clap_light/quartus/db/altpll_0_altpll.v}
 
 vlog -vlog01compat -work work +incdir+C:/projects/de0_nano_clap_clap_light/quartus/../hdl {C:/projects/de0_nano_clap_clap_light/quartus/../hdl/testbench.v}
 

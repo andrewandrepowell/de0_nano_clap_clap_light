@@ -3,7 +3,8 @@ module top2(
 	output wire spi_clock,
 	output wire spi_chipselect,
 	input wire spi_data,
-	output wire toglite_state);
+	output wire toglite_state,
+	output wire [6:0] debug);
 	
 	function integer clogb2 ( input integer bit_depth );                                   
 		begin                                                                              
@@ -12,26 +13,25 @@ module top2(
 		end                                                                                
 	endfunction 
 	
-	localparam integer CLOCK_PERIOD=10;
-	localparam integer CLK_TRIG=2;
-	localparam integer GRAB_TRIG=128;
-	localparam integer RAM_ADDR_WIDTH=2;
+	localparam integer CLK_TRIG=8;
+	localparam integer GRAB_TRIG=2048;
+	localparam integer RAM_ADDR_WIDTH=4;
 	localparam integer SAMPLE_WIDTH=16;
-	localparam integer LAG=3;
-	localparam integer DURATION=4;
-	localparam integer SIGNAL_BIAS=-64;
+	localparam integer LAG=63;
+	localparam integer DURATION=64;
+	localparam integer SIGNAL_BIAS=-1918;
 	localparam integer ENERGY_WIDTH=SAMPLE_WIDTH*2+clogb2(DURATION);
-	localparam integer ENERGY_HIGH_THRESHOLD = 4000;
-	localparam integer ENERGY_LOW_THRESHOLD = 2000;
-	localparam integer SAMPLE_HIGH_THRESHOLD = 4;
-	localparam integer SAMPLE_MIDDLE_THRESHOLD = 8;
-	localparam integer SAMPLE_LOW_THRESHOLD = 8;
-	localparam integer CLAPS_SAMPLE_THRESHOLD = 40;
+	localparam integer ENERGY_HIGH_THRESHOLD =  20000000;
+	localparam integer ENERGY_LOW_THRESHOLD  =   7000000;
+	localparam integer SAMPLE_HIGH_THRESHOLD = 30;
+	localparam integer SAMPLE_MIDDLE_THRESHOLD = 5000;
+	localparam integer SAMPLE_LOW_THRESHOLD = 5000;
+	localparam integer CLAPS_SAMPLE_THRESHOLD = 40000;
 	localparam integer CLAPS_WIDTH = 16;
-	localparam integer TOGLITE_ON_VAL=3;
-	localparam integer TOGLITE_OFF_VAL=1;
+	localparam integer TOGLITE_ON_VAL=2;
+	localparam integer TOGLITE_OFF_VAL=3;
 	
-	wire clock;
+	wire clock, locked;
 	wire [(SAMPLE_WIDTH/8)-1 : 0] sample_tstrb_sig;
 	wire [SAMPLE_WIDTH-1:0] sample_data_sig;
 	wire sample_ready_sig, sample_valid_sig;
@@ -40,10 +40,19 @@ module top2(
 	wire [CLAPS_WIDTH-1:0] claps_data_sig;
 	wire claps_valid_sig,claps_ready_sig;
 	
+	assign debug = (toglite_state==1)?2**7-1:0;
+	
+//	debug_0 (
+//		.probe({sample_data_sig,sample_ready_sig,sample_valid_sig}),      //     probes.probe
+//		.source_clk(clock), // source_clk.clk
+//		.source(),     //    sources.source
+//		.source_ena(locked)  //           .source_ena
+//	);
+	
 	altpll_0 altpll_0_inst (
 		.inclk0(inclock),
 		.c0(clock),
-		.locked());
+		.locked(locked));
 	
 	GetSignal #(
 		.CLK_TRIG(CLK_TRIG),

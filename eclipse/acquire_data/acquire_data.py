@@ -8,7 +8,7 @@ then save those audio samples as text files.
 @author: andrewandrepowell2
 '''
 
-import socket, numpy, sounddevice, itertools, time
+import socket, numpy, itertools, time #,sounddevice
 from matplotlib import pyplot
 
 class socket_wrap( object ):
@@ -35,9 +35,9 @@ if __name__ == '__main__':
     AUDIO_GET_SIGNAL_GRAB_TRIG = 2048
     AUDIO_GET_SIGNAL_CLOCK = 100e6
     AUDIO_SAMPLE_RATE = AUDIO_GET_SIGNAL_CLOCK/AUDIO_GET_SIGNAL_GRAB_TRIG
-    DATA_CLAPS = [ 1, 2, 3, 4 ]
+    DATA_CLAPS = [ 4 ]
     DATA_TRIALS = range( 1 )
-    TCP_IP_ADDR = '192.168.1.172'
+    TCP_IP_ADDR = '192.168.1.10'
     TCP_PORT = 7
     TCP_RCBUF_SIZE = AUDIO_BUFFER_SIZE*2
     NUMPY_DATA_DT = numpy.dtype( numpy.int16 )
@@ -79,9 +79,9 @@ if __name__ == '__main__':
             pyplot.plot( data )
             pyplot.title( fname )
             
-            # Play the sound.
-            sounddevice.play( data, AUDIO_SAMPLE_RATE )
-            sounddevice.wait()
+#             # Play the sound.
+#             sounddevice.play( data, AUDIO_SAMPLE_RATE )
+#             sounddevice.wait()
             
             # Save the data as a a compressed file.
             numpy.savez_compressed( fname, data )

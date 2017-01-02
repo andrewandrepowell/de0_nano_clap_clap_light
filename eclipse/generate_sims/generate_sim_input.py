@@ -17,16 +17,17 @@ if __name__ == '__main__':
     
     # Define the constants for the script.
     FILE_LOC = '../acquire_data'
-    FILE_NCLAP = 1
-    FILE_NTRIAL = 1
+    FILE_NCLAP = 4
+    FILE_NTRIAL = 0
     FILE_BNAME = 'nclap_' + repr( FILE_NCLAP ) + '_ntrial_' + repr( FILE_NTRIAL )
     FILE_NAME = FILE_BNAME + '.npz'
     FILE_FULL_PATH = os.path.join( FILE_LOC, FILE_NAME )
     SAVE_NAME = FILE_BNAME + '.txt'
-    ENERGY_SIGNAL_BIAS = -64
+    ENERGY_SIGNAL_BIAS = -1918 # (Delta m_H=30), (Delta m_H=40) (e_H=100000000) (Delta m_M/L=5000) (e_L=10000000) (Delta m=20000)
     ENERGY_NAME = FILE_BNAME + '_energy.txt'
-    ENERGY_SAMPLES_PER_ENERGY_SAMPLE = 4
+    ENERGY_SAMPLES_PER_ENERGY_SAMPLE = 64
     ENERGY_LAG = ENERGY_SAMPLES_PER_ENERGY_SAMPLE-1
+    ENEGY_SIZE = 120000
     
     # Load file as data.
     with np.load( FILE_FULL_PATH ) as npz_obj:
@@ -49,7 +50,7 @@ if __name__ == '__main__':
         x_n[ m*(delta_n-delta_n_L):m*(delta_n-delta_n_L)+delta_n ]+ENERGY_SIGNAL_BIAS ) ) 
                      for m in range( S_M ) ] )
     e_m = e_m.astype( np.dtype( np.int64 ), copy=False )
-    e_m = e_m[0:120]
+    e_m = e_m[0:ENEGY_SIZE]
     
     # Store energy signal as a list of decimal values.
     with open( ENERGY_NAME, 'w' ) as nf_obj:
@@ -59,7 +60,7 @@ if __name__ == '__main__':
     # Display plots.
     pp.figure()
     pp.plot( x_n )
-    pp.title( 'signal' )
+    pp.title( 'signal: avg=' + repr( np.mean(x_n) ) )
     plot_grid()
     pp.figure()
     pp.plot( e_m )

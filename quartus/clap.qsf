@@ -60,22 +60,11 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME GetSignal_testbench -sect
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
-set_global_assignment -name VERILOG_FILE ../hdl/ToggleLight.v
-set_global_assignment -name VERILOG_FILE ../hdl/DetermineSuccessiveClapsAmount.v
-set_global_assignment -name VERILOG_FILE ../hdl/DetermineClap.v
-set_global_assignment -name VERILOG_FILE ../hdl/ComputeEnergy.v
-set_global_assignment -name VERILOG_FILE ../hdl/spimaster.v
-set_global_assignment -name VERILOG_FILE ../hdl/GetSignal.v
-set_global_assignment -name VERILOG_FILE ../hdl/fifo.v
-set_global_assignment -name VERILOG_FILE ../hdl/driver.v
-set_global_assignment -name VERILOG_FILE ../hdl/top2.v
 set_global_assignment -name EDA_TEST_BENCH_FILE ../hdl/GetSignal_testbench.v -section_id GetSignal_testbench
 set_global_assignment -name EDA_TEST_BENCH_FILE ../hdl/testbench.v -section_id testbench
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name QIP_FILE ../hdl/altpll_0.qip
-set_global_assignment -name SDC_FILE ../hdl/de0_nano_system_sdc.sdc
 set_global_assignment -name ENABLE_OCT_DONE OFF
 set_global_assignment -name ENABLE_CONFIGURATION_PINS OFF
 set_global_assignment -name ENABLE_BOOT_SEL_PIN OFF
@@ -92,9 +81,35 @@ set_location_assignment PIN_A15 -to toglite_state
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to toglite_state
 set_location_assignment PIN_D3 -to spi_chipselect
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_chipselect
-set_location_assignment PIN_C3 -to spi_clock
+set_location_assignment PIN_A3 -to spi_clock
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_clock
-set_location_assignment PIN_A3 -to spi_data
+set_location_assignment PIN_C3 -to spi_data
 set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to spi_data
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name VERILOG_FILE ../hdl/ToggleLight.v
+set_global_assignment -name VERILOG_FILE ../hdl/DetermineSuccessiveClapsAmount.v
+set_global_assignment -name VERILOG_FILE ../hdl/DetermineClap.v
+set_global_assignment -name VERILOG_FILE ../hdl/ComputeEnergy.v
+set_global_assignment -name VERILOG_FILE ../hdl/spimaster.v
+set_global_assignment -name VERILOG_FILE ../hdl/GetSignal.v
+set_global_assignment -name VERILOG_FILE ../hdl/fifo.v
+set_global_assignment -name VERILOG_FILE ../hdl/driver.v
+set_global_assignment -name VERILOG_FILE ../hdl/top2.v
+set_global_assignment -name QIP_FILE ../hdl/altpll_0.qip
+set_global_assignment -name SDC_FILE ../hdl/de0_nano_system_sdc.sdc
 set_global_assignment -name CDF_FILE output_files/Chain2.cdf
+set_location_assignment PIN_L3 -to debug[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to debug[6]
+set_location_assignment PIN_B1 -to debug[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to debug[5]
+set_location_assignment PIN_F3 -to debug[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to debug[4]
+set_location_assignment PIN_D1 -to debug[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to debug[3]
+set_location_assignment PIN_A11 -to debug[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to debug[2]
+set_location_assignment PIN_B13 -to debug[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to debug[1]
+set_location_assignment PIN_A13 -to debug[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to debug[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to debug
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

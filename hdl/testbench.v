@@ -15,8 +15,9 @@ module testbench;
 	wire spi_clock_sig;
 	wire spi_chipselect_sig;
 	reg spi_data_sig=0;
+	wire [6:0] debug_sig;
 	
-	localparam integer IN_SAMPLE_TOTAL=128;
+	localparam integer IN_SAMPLE_TOTAL=120000;
 	integer in;
 	reg [SAMPLE_WIDTH-1:0] in_samples [0:IN_SAMPLE_TOTAL-1];
 	reg [SAMPLE_WIDTH-1:0] in_noise [0:IN_SAMPLE_TOTAL-1];
@@ -47,7 +48,8 @@ module testbench;
 	.spi_clock(spi_clock_sig),	
 	.spi_chipselect(spi_chipselect_sig),
 	.spi_data(spi_data_sig),	
-	.toglite_state(toglite_state_sig));
+	.toglite_state(toglite_state_sig),
+	.debug(debug_sig));
         
     // Drive clock
     always 
@@ -63,7 +65,7 @@ module testbench;
 			integer each_word;
 			// Load data into input sample buffer.
 			$display("Loading input data...");
-			in  = $fopen("../../../eclipse/generate_sims/nclap_3_ntrial_1.txt","r");
+			in  = $fopen("../../../eclipse/generate_sims/nclap_3_ntrial_0.txt","r");
 			wait_clock_cycles(1);
 			each_word = 0;
 			while (!$feof(in)) 
@@ -74,13 +76,14 @@ module testbench;
 			$fclose(in);
 			// Drive SPI interface.
 			wait_clock_cycles(1);
-			for ( each_word=0; each_word<IN_SAMPLE_TOTAL; each_word=each_word+1 )
+			for ( each_word=50000; each_word<IN_SAMPLE_TOTAL; each_word=each_word+1 )
 				begin
+					$display("Writing sample %d with value %d...",in_samples[each_word],each_word);
 					drive_spi(in_samples[each_word]);
 				end
 			// Load data into input sample buffer.
 			$display("Loading input data...");
-			in  = $fopen("../../../eclipse/generate_sims/nclap_1_ntrial_1.txt","r");
+			in  = $fopen("../../../eclipse/generate_sims/nclap_2_ntrial_0.txt","r");
 			wait_clock_cycles(1);
 			each_word = 0;
 			while (!$feof(in)) 
@@ -92,12 +95,13 @@ module testbench;
 			wait_clock_cycles(1);
 			for ( each_word=0; each_word<IN_SAMPLE_TOTAL; each_word=each_word+1 )
 				begin
+					$display("Writing sample %d with value %d...",in_samples[each_word],each_word);
 					drive_spi(in_samples[each_word]);
 				end
 			$fclose(in);
 			// Loading noise.
 			$display("Loading input noise...");
-			in  = $fopen("../../../eclipse/generate_sims/nclap_0_ntrial_1.txt","r");
+			in  = $fopen("../../../eclipse/generate_sims/nclap_0_ntrial_0.txt","r");
 			wait_clock_cycles(1);
 			each_word = 0;
 			while (!$feof(in)) 
@@ -110,6 +114,7 @@ module testbench;
 			wait_clock_cycles(1);
 			for ( each_word=0; each_word<IN_SAMPLE_TOTAL; each_word=each_word+1 )
 				begin
+					$display("Writing noise sample %d with value %d...",in_noise[each_word],each_word);
 					drive_spi(in_noise[each_word]);
 				end
 			$finish;
